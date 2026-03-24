@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://nook-ten-theta.vercel.app/sitemap.xml
+
+# Block internal/config paths
+Disallow: /.vercel/
+Disallow: /.git/

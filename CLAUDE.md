@@ -37,6 +37,8 @@ Nook is a co-living marketing website for furnished shared rooms in London. It's
 ├── styles.css                  # Single stylesheet, all styles
 ├── script.js                   # Single JS file, all interactivity
 ├── listings-data.json          # Room data scraped from fllat.com (reference data)
+├── sitemap.xml                 # XML sitemap for search engines (all 27 pages)
+├── robots.txt                  # Crawl directives + sitemap reference
 └── .vercel/                    # Vercel project config (gitignored)
 ```
 
@@ -60,6 +62,48 @@ Nook is a co-living marketing website for furnished shared rooms in London. It's
 ### Forms
 - Contact form (`#contact-form`) submits to Web3Forms API
 - Modal apply forms on room pages use demo submission (no backend)
+
+## SEO Infrastructure
+
+### Meta Tags (all 27 pages)
+- Canonical URLs pointing to `https://nook-ten-theta.vercel.app/{page}`
+- Open Graph tags: type, site_name, title, description, url, image, locale (en_GB)
+- Twitter Card tags: summary_large_image with title, description, image
+- Google Fonts preconnect (`fonts.googleapis.com` + `fonts.gstatic.com`)
+
+### Structured Data (JSON-LD with @id graph)
+- **Homepage:** Organization + LocalBusiness + FAQPage (6 items)
+- **FAQ page:** FAQPage schema (all 12 Q&A pairs)
+- **Room pages (16):** Accommodation schema (name, address, price in GBP/WEEK, provider @id link) + BreadcrumbList
+- **Blog posts (3):** BlogPosting (with @id, isPartOf, mainEntityOfPage) + BreadcrumbList
+- **Rooms listing:** BreadcrumbList
+- All schemas use `@id` references to connect entities (e.g., rooms link to `/#organization`)
+
+### Crawl & Indexing
+- `sitemap.xml` - lists all 27 pages with priority, lastmod, changefreq
+- `robots.txt` - allows all, blocks `.vercel/` and `.git/`, references sitemap
+
+### Performance
+- `loading="lazy" decoding="async"` on all non-LCP images
+- LCP images (hero, main gallery) are NOT lazy-loaded to preserve paint speed
+
+### Adding a New Room (SEO checklist)
+1. Copy an existing `room-*.html` file
+2. Update content, images, price, address
+3. Update the `<link rel="canonical">` href to the new filename
+4. Update all OG and Twitter meta tags (title, description, url, image)
+5. Update both JSON-LD blocks (Accommodation data + BreadcrumbList name)
+6. Add the page to `sitemap.xml`
+7. Add a `.room-card` in `rooms.html` with correct `data-area` and `data-type`
+
+### Adding a New Blog Post (SEO checklist)
+1. Copy an existing `blog-*.html` file
+2. Update content, meta tags, title, and canonical URL
+3. Update all OG and Twitter meta tags
+4. Update BlogPosting JSON-LD (@id, headline, description, image, dates)
+5. Update BreadcrumbList JSON-LD (last item name)
+6. Add the page to `sitemap.xml`
+7. Add a card linking to it in `blog.html`
 
 ## External Services
 - **Web3Forms:** Contact form backend (API key in contact.html hidden input)
