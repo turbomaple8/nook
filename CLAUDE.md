@@ -3,7 +3,7 @@
 ## Project Overview
 Nook is a co-living marketing website for furnished shared rooms in London. It's a **static HTML/CSS/JS site** — no frameworks, no build step, no server-side logic.
 
-**Live URL:** https://nook-ten-theta.vercel.app
+**Live URL:** https://nookrent.com
 **Repo:** https://github.com/turbomaple8/nook
 **Hosting:** Vercel (auto-deploys from `main` branch via GitHub integration)
 
@@ -66,7 +66,7 @@ Nook is a co-living marketing website for furnished shared rooms in London. It's
 ## SEO Infrastructure
 
 ### Meta Tags (all 27 pages)
-- Canonical URLs pointing to `https://nook-ten-theta.vercel.app/{page}`
+- Canonical URLs pointing to `https://nookrent.com/{page}`
 - Open Graph tags: type, site_name, title, description, url, image, locale (en_GB)
 - Twitter Card tags: summary_large_image with title, description, image
 - Google Fonts preconnect (`fonts.googleapis.com` + `fonts.gstatic.com`)

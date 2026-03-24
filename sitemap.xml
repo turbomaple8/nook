@@ -2,49 +2,49 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <!-- Main Pages -->
   <url>
-    <loc>https://nook-ten-theta.vercel.app/index.html</loc>
+    <loc>https://nookrent.com/index.html</loc>
     <lastmod>2025-02-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://nook-ten-theta.vercel.app/rooms.html</loc>
+    <loc>https://nookrent.com/rooms.html</loc>
     <lastmod>2025-02-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://nook-ten-theta.vercel.app/about.html</loc>
+    <loc>https://nookrent.com/about.html</loc>
     <lastmod>2025-02-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://nook-ten-theta.vercel.app/contact.html</loc>
+    <loc>https://nookrent.com/contact.html</loc>
     <lastmod>2025-02-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://nook-ten-theta.vercel.app/blog.html</loc>
+    <loc>https://nookrent.com/blog.html</loc>
     <lastmod>2025-02-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://nook-ten-theta.vercel.app/faq.html</loc>
+    <loc>https://nookrent.com/faq.html</loc>
     <lastmod>2025-02-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://nook-ten-theta.vercel.app/privacy.html</loc>
+    <loc>https://nookrent.com/privacy.html</loc>
     <lastmod>2025-02-15</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
-    <loc>https://nook-ten-theta.vercel.app/terms.html</loc>
+    <loc>https://nookrent.com/terms.html</loc>
     <lastmod>2025-02-15</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
@@ -52,19 +52,19 @@
 
   <!-- Blog Posts -->
   <url>
-    <loc>https://nook-ten-theta.vercel.app/blog-co-living-london-guide.html</loc>
+    <loc>https://nookrent.com/blog-co-living-london-guide.html</loc>
     <lastmod>2025-02-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://nook-ten-theta.vercel.app/blog-best-london-neighbourhoods.html</loc>
+    <loc>https://nookrent.com/blog-best-london-neighbourhoods.html</loc>
     <lastmod>2025-02-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://nook-ten-theta.vercel.app/blog-cost-renting-room-london.html</loc>
+    <loc>https://nookrent.com/blog-cost-renting-room-london.html</loc>
     <lastmod>2025-02-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -72,43 +72,43 @@
 
   <!-- Room Listings - Canary Wharf -->
   <url>
-    <loc>https://nook-ten-theta.vercel.app/room-deluxe-canary-wharf.html</loc>
+    <loc>https://nookrent.com/room-deluxe-canary-wharf.html</loc>
     <lastmod>2025-02-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://nook-ten-theta.vercel.app/room-deluxe-canary-wharf-south-quay.html</loc>
+    <loc>https://nookrent.com/room-deluxe-canary-wharf-south-quay.html</loc>
     <lastmod>2025-02-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://nook-ten-theta.vercel.app/room-flex-basic-canary-wharf.html</loc>
+    <loc>https://nookrent.com/room-flex-basic-canary-wharf.html</loc>
     <lastmod>2025-02-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://nook-ten-theta.vercel.app/room-flex-plus-canary-wharf.html</loc>
+    <loc>https://nookrent.com/room-flex-plus-canary-wharf.html</loc>
     <lastmod>2025-02-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://nook-ten-theta.vercel.app/room-flex-plus-balcony.html</loc>
+    <loc>https://nookrent.com/room-flex-plus-balcony.html</loc>
     <lastmod>2025-02-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://nook-ten-theta.vercel.app/room-master-canary-wharf.html</loc>
+    <loc>https://nookrent.com/room-master-canary-wharf.html</loc>
     <lastmod>2025-02-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://nook-ten-theta.vercel.app/room-master-canary-wharf-south-quay.html</loc>
+    <loc>https://nookrent.com/room-master-canary-wharf-south-quay.html</loc>
     <lastmod>2025-02-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
@@ -116,25 +116,25 @@
 
   <!-- Room Listings - Central London -->
   <url>
-    <loc>https://nook-ten-theta.vercel.app/room-deluxe-central-london.html</loc>
+    <loc>https://nookrent.com/room-deluxe-central-london.html</loc>
     <lastmod>2025-02-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://nook-ten-theta.vercel.app/room-flex-basic-central-london.html</loc>
+    <loc>https://nookrent.com/room-flex-basic-central-london.html</loc>
     <lastmod>2025-02-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://nook-ten-theta.vercel.app/room-flex-premium-central-london.html</loc>
+    <loc>https://nookrent.com/room-flex-premium-central-london.html</loc>
     <lastmod>2025-02-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://nook-ten-theta.vercel.app/room-master-central-london.html</loc>
+    <loc>https://nookrent.com/room-master-central-london.html</loc>
     <lastmod>2025-02-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
@@ -142,19 +142,19 @@
 
   <!-- Room Listings - Dingley Road -->
   <url>
-    <loc>https://nook-ten-theta.vercel.app/room-deluxe-dingley-road.html</loc>
+    <loc>https://nookrent.com/room-deluxe-dingley-road.html</loc>
     <lastmod>2025-02-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://nook-ten-theta.vercel.app/room-flex-basic-dingley-road.html</loc>
+    <loc>https://nookrent.com/room-flex-basic-dingley-road.html</loc>
     <lastmod>2025-02-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://nook-ten-theta.vercel.app/room-master-dingley-road.html</loc>
+    <loc>https://nookrent.com/room-master-dingley-road.html</loc>
     <lastmod>2025-02-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
@@ -162,13 +162,13 @@
 
   <!-- Room Listings - Islington -->
   <url>
-    <loc>https://nook-ten-theta.vercel.app/room-deluxe-islington.html</loc>
+    <loc>https://nookrent.com/room-deluxe-islington.html</loc>
     <lastmod>2025-02-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://nook-ten-theta.vercel.app/room-master-islington.html</loc>
+    <loc>https://nookrent.com/room-master-islington.html</loc>
     <lastmod>2025-02-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
