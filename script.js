@@ -120,6 +120,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const BACKEND_PROJECT_ID = 'nook';
 
   function forwardToBackend(endpoint, payload) {
+    console.log('[Backend] Forwarding to', endpoint, payload);
     fetch(`${BACKEND_API_URL}/v1/public/${endpoint}`, {
       method: 'POST',
       headers: {
@@ -127,7 +128,9 @@ document.addEventListener('DOMContentLoaded', () => {
         'X-Project-Id': BACKEND_PROJECT_ID
       },
       body: JSON.stringify(payload)
-    }).catch(() => {});
+    })
+    .then(r => console.log('[Backend] Response:', r.status, r.statusText))
+    .catch(err => console.error('[Backend] Error:', err));
   }
 
   // ── Contact form submission (Web3Forms) ──
