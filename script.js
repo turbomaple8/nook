@@ -115,6 +115,21 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
+  // ── Backend forwarding (fire-and-forget) ──
+  const BACKEND_API_URL = 'https://coliville-api-626057356331.us-east1.run.app';
+  const BACKEND_PROJECT_ID = 'nook';
+
+  function forwardToBackend(endpoint, payload) {
+    fetch(`${BACKEND_API_URL}/v1/public/${endpoint}`, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'X-Project-Id': BACKEND_PROJECT_ID
+      },
+      body: JSON.stringify(payload)
+    }).catch(() => {});
+  }
+
   // ── Contact form submission (Web3Forms) ──
   const contactForm = document.getElementById('contact-form');
   if (contactForm) {
@@ -127,6 +142,23 @@ document.addEventListener('DOMContentLoaded', () => {
 
       const formData = new FormData(contactForm);
       const data = Object.fromEntries(formData);
+
+      // Forward viewing requests to backend as tour requests
+      if (data.enquiry_type === 'viewing') {
+        const nameParts = (data.name || '').trim().split(/\s+/);
+        forwardToBackend('tour-requests', {
+          firstName: nameParts[0] || '',
+          lastName: nameParts.slice(1).join(' ') || '',
+          email: data.email,
+          phone: data.phone || null,
+          property: null,
+          date: new Date().toISOString().split('T')[0],
+          time: 'morning',
+          notes: data.message || null,
+          sourceWebsite: 'nookrent.com',
+          city: 'London'
+        });
+      }
 
       fetch('https://api.web3forms.com/submit', {
         method: 'POST',
@@ -166,8 +198,50 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // ── Other form submission (demo — modal apply forms) ──
-  document.querySelectorAll('form:not(#contact-form)').forEach(form => {
+  // ── Apply form submission (modal) ──
+  const applyForm = document.getElementById('apply-form');
+  if (applyForm) {
+    applyForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const submitBtn = applyForm.querySelector('[type="submit"]');
+      const originalText = submitBtn.innerHTML;
+      submitBtn.innerHTML = '✓ Sent! We\'ll be in touch 🎉';
+      submitBtn.style.background = 'var(--clr-sage)';
+      submitBtn.disabled = true;
+
+      // Forward to backend
+      const name = document.getElementById('apply-name')?.value || '';
+      const email = document.getElementById('apply-email')?.value || '';
+      const phone = document.getElementById('apply-phone')?.value || '';
+      const moveIn = document.getElementById('apply-move')?.value || '';
+      const message = document.getElementById('apply-message')?.value || '';
+
+      forwardToBackend('applications', {
+        fullName: name,
+        email: email,
+        phone: phone || null,
+        moveInDate: moveIn || null,
+        aboutYou: message || null,
+        sourceWebsite: 'nookrent.com',
+        city: 'London'
+      });
+
+      setTimeout(() => {
+        submitBtn.innerHTML = originalText;
+        submitBtn.style.background = '';
+        submitBtn.disabled = false;
+        applyForm.reset();
+        const modal = applyForm.closest('.modal-overlay');
+        if (modal) {
+          modal.classList.remove('active');
+          document.body.style.overflow = '';
+        }
+      }, 3000);
+    });
+  }
+
+  // ── Other non-contact, non-apply forms (keep demo behavior) ──
+  document.querySelectorAll('form:not(#contact-form):not(#apply-form)').forEach(form => {
     form.addEventListener('submit', (e) => {
       e.preventDefault();
       const submitBtn = form.querySelector('[type="submit"]');
