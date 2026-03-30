@@ -143,9 +143,9 @@ document.addEventListener('DOMContentLoaded', () => {
       const formData = new FormData(contactForm);
       const data = Object.fromEntries(formData);
 
-      // Forward viewing requests to backend as tour requests
+      // Forward to backend based on enquiry type
+      const nameParts = (data.name || '').trim().split(/\s+/);
       if (data.enquiry_type === 'viewing') {
-        const nameParts = (data.name || '').trim().split(/\s+/);
         forwardToBackend('tour-requests', {
           firstName: nameParts[0] || '',
           lastName: nameParts.slice(1).join(' ') || '',
@@ -155,6 +155,15 @@ document.addEventListener('DOMContentLoaded', () => {
           date: new Date().toISOString().split('T')[0],
           time: 'morning',
           notes: data.message || null,
+          sourceWebsite: 'nookrent.com',
+          city: 'London'
+        });
+      } else {
+        forwardToBackend('applications', {
+          fullName: data.name || '',
+          email: data.email,
+          phone: data.phone || null,
+          aboutYou: (data.enquiry_type ? '[' + data.enquiry_type + '] ' : '') + (data.message || ''),
           sourceWebsite: 'nookrent.com',
           city: 'London'
         });
