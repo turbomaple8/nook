@@ -241,6 +241,43 @@ h1, h2, h3, h4, h5, h6 {
   color: #fff;
 }
 
+/* Reserve modal - compact layout (no scroll) */
+#modal-reserve .modal {
+  padding: 1.25rem 1.5rem;
+  max-width: 440px;
+}
+#modal-reserve .modal h2 {
+  margin-bottom: 0.25rem;
+  font-size: 1.25rem;
+}
+#modal-reserve .modal > p {
+  margin-bottom: 0.5rem !important;
+  font-size: 0.85rem;
+}
+#modal-reserve .reserve-context {
+  padding: 0.5rem 0.75rem;
+  margin-bottom: 0.6rem;
+}
+#modal-reserve .reserve-context strong {
+  font-size: 0.9rem;
+}
+#modal-reserve .form-group {
+  margin-bottom: 0.5rem;
+}
+#modal-reserve .form-group label {
+  font-size: 0.8rem;
+  margin-bottom: 0.2em;
+}
+#modal-reserve .form-group input {
+  padding: 0.5em 0.75em;
+  font-size: 0.9rem;
+}
+#modal-reserve .btn--primary {
+  padding: 0.6em 1em;
+  font-size: 0.9rem;
+  margin-top: 0.25rem;
+}
+
 .btn--reserve {
   background: transparent;
   color: var(--clr-coral);
