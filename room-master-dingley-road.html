@@ -163,6 +163,7 @@
             </div>
             <a href="contact.html" class="btn btn--primary btn--lg">Book a Viewing →</a>
             <a href="contact.html" class="btn btn--outline btn--lg">Ask a Question</a>
+            <a href="#" class="btn btn--reserve btn--lg" data-modal="reserve" data-reserve-room="Master (En-Suite)" data-reserve-location="Central London">Reserve – No Payment</a>
             <p class="booking-card__note">No commitment — just a friendly chat</p>
           </div>
         </div>
@@ -191,6 +192,41 @@
       <div class="footer__bottom"><p>© 2025 Nook. All rights reserved.</p></div>
     </div>
   </footer>
+
+  <!-- Reserve Modal -->
+  <div class="modal-overlay" id="modal-reserve">
+    <div class="modal">
+      <button class="modal__close" aria-label="Close">&times;</button>
+      <h2>Reserve Your Room 🏡</h2>
+      <p style="margin-bottom:1rem; color:var(--clr-text-light);">No payment required. Secure your spot in seconds.</p>
+      <div class="reserve-context" id="reserveContext" style="background:var(--clr-cream-dark,#f0e6d6); border-radius:8px; padding:0.75rem 1rem; margin-bottom:1rem;">
+        <strong id="reserveRoomLabel"></strong>
+        <span id="reserveLocationLabel" style="display:block; font-size:0.85rem; color:var(--clr-text-muted); margin-top:0.15rem;"></span>
+      </div>
+      <form id="reserve-form">
+        <input type="hidden" id="reserve-room" name="reserveRoom">
+        <input type="hidden" id="reserve-location" name="reserveLocation">
+        <div class="form-group">
+          <label for="reserve-name">Full Name</label>
+          <input type="text" id="reserve-name" placeholder="Your name" required>
+        </div>
+        <div class="form-group">
+          <label for="reserve-email">Email</label>
+          <input type="email" id="reserve-email" placeholder="hello@example.com" required>
+        </div>
+        <div class="form-group">
+          <label for="reserve-phone">Phone</label>
+          <input type="tel" id="reserve-phone" placeholder="+44 7XXX XXXXXX" required>
+        </div>
+        <div class="form-group">
+          <label for="reserve-move">Desired Move-in Date</label>
+          <input type="date" id="reserve-move">
+        </div>
+        <button type="submit" class="btn btn--primary btn--lg" style="width:100%">Reserve – No Payment Required</button>
+        <p style="text-align:center; font-size:0.75rem; color:var(--clr-text-muted); margin-top:0.75rem;">24-hour hold, no payment, no obligation.</p>
+      </form>
+    </div>
+  </div>
   <button class="back-to-top" id="back-to-top" aria-label="Back to top">↑</button>
   <script src="script.js"></script>
 </body>

@@ -241,6 +241,20 @@ h1, h2, h3, h4, h5, h6 {
   color: #fff;
 }
 
+.btn--reserve {
+  background: transparent;
+  color: var(--clr-coral);
+  border: 1.5px dashed var(--clr-coral);
+  width: 100%;
+  text-align: center;
+}
+
+.btn--reserve:hover {
+  background: var(--clr-coral);
+  color: var(--clr-white, #fff);
+  border-style: solid;
+}
+
 .btn--ghost {
   background: rgba(255,255,255,0.15);
   color: #fff;

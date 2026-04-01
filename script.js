@@ -115,13 +115,13 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // ── Backend forwarding (fire-and-forget) ──
+  // ── Backend API (primary submission) ──
   const BACKEND_API_URL = 'https://coliville-api-626057356331.us-east1.run.app';
   const BACKEND_PROJECT_ID = 'nook';
 
   function forwardToBackend(endpoint, payload) {
-    console.log('[Backend] Forwarding to', endpoint, payload);
-    fetch(`${BACKEND_API_URL}/v1/public/${endpoint}`, {
+    console.log('[Backend] Sending to', endpoint, payload);
+    return fetch(`${BACKEND_API_URL}/v1/public/${endpoint}`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -129,11 +129,14 @@ document.addEventListener('DOMContentLoaded', () => {
       },
       body: JSON.stringify(payload)
     })
-    .then(r => console.log('[Backend] Response:', r.status, r.statusText))
-    .catch(err => console.error('[Backend] Error:', err));
+    .then(r => {
+      console.log('[Backend] Response:', r.status, r.statusText);
+      if (!r.ok) throw new Error('Backend responded with ' + r.status);
+      return r;
+    });
   }
 
-  // ── Contact form submission (Web3Forms) ──
+  // ── Contact form submission ──
   const contactForm = document.getElementById('contact-form');
   if (contactForm) {
     contactForm.addEventListener('submit', (e) => {
@@ -145,11 +148,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
       const formData = new FormData(contactForm);
       const data = Object.fromEntries(formData);
-
-      // Forward to backend based on enquiry type
       const nameParts = (data.name || '').trim().split(/\s+/);
+
+      let backendCall;
       if (data.enquiry_type === 'viewing') {
-        forwardToBackend('tour-requests', {
+        backendCall = forwardToBackend('tour-requests', {
           firstName: nameParts[0] || '',
           lastName: nameParts.slice(1).join(' ') || '',
           email: data.email,
@@ -162,7 +165,7 @@ document.addEventListener('DOMContentLoaded', () => {
           city: 'London'
         });
       } else {
-        forwardToBackend('applications', {
+        backendCall = forwardToBackend('applications', {
           fullName: data.name || '',
           email: data.email,
           phone: data.phone || null,
@@ -172,34 +175,19 @@ document.addEventListener('DOMContentLoaded', () => {
         });
       }
 
-      fetch('https://api.web3forms.com/submit', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(data)
-      })
-        .then(res => res.json())
-        .then(result => {
-          if (result.success) {
-            submitBtn.innerHTML = '✓ Sent! We\'ll be in touch 🎉';
-            submitBtn.style.background = 'var(--clr-sage)';
-            contactForm.reset();
-            setTimeout(() => {
-              submitBtn.innerHTML = originalText;
-              submitBtn.style.background = '';
-              submitBtn.disabled = false;
-            }, 3000);
-          } else {
-            submitBtn.innerHTML = '✗ Something went wrong. Try again.';
-            submitBtn.style.background = 'var(--clr-coral)';
-            setTimeout(() => {
-              submitBtn.innerHTML = originalText;
-              submitBtn.style.background = '';
-              submitBtn.disabled = false;
-            }, 3000);
-          }
+      backendCall
+        .then(() => {
+          submitBtn.innerHTML = '✓ Sent! We\'ll be in touch 🎉';
+          submitBtn.style.background = 'var(--clr-sage)';
+          contactForm.reset();
+          setTimeout(() => {
+            submitBtn.innerHTML = originalText;
+            submitBtn.style.background = '';
+            submitBtn.disabled = false;
+          }, 3000);
         })
         .catch(() => {
-          submitBtn.innerHTML = '✗ Network error. Please try again.';
+          submitBtn.innerHTML = '✗ Something went wrong. Try again.';
           submitBtn.style.background = 'var(--clr-coral)';
           setTimeout(() => {
             submitBtn.innerHTML = originalText;
@@ -217,11 +205,9 @@ document.addEventListener('DOMContentLoaded', () => {
       e.preventDefault();
       const submitBtn = applyForm.querySelector('[type="submit"]');
       const originalText = submitBtn.innerHTML;
-      submitBtn.innerHTML = '✓ Sent! We\'ll be in touch 🎉';
-      submitBtn.style.background = 'var(--clr-sage)';
+      submitBtn.innerHTML = 'Sending...';
       submitBtn.disabled = true;
 
-      // Forward to backend
       const name = document.getElementById('apply-name')?.value || '';
       const email = document.getElementById('apply-email')?.value || '';
       const phone = document.getElementById('apply-phone')?.value || '';
@@ -236,24 +222,127 @@ document.addEventListener('DOMContentLoaded', () => {
         aboutYou: message || null,
         sourceWebsite: 'nookrent.com',
         city: 'London'
-      });
-
-      setTimeout(() => {
-        submitBtn.innerHTML = originalText;
-        submitBtn.style.background = '';
-        submitBtn.disabled = false;
-        applyForm.reset();
-        const modal = applyForm.closest('.modal-overlay');
-        if (modal) {
-          modal.classList.remove('active');
-          document.body.style.overflow = '';
-        }
-      }, 3000);
+      })
+        .then(() => {
+          submitBtn.innerHTML = '✓ Sent! We\'ll be in touch 🎉';
+          submitBtn.style.background = 'var(--clr-sage)';
+          setTimeout(() => {
+            submitBtn.innerHTML = originalText;
+            submitBtn.style.background = '';
+            submitBtn.disabled = false;
+            applyForm.reset();
+            const modal = applyForm.closest('.modal-overlay');
+            if (modal) {
+              modal.classList.remove('active');
+              document.body.style.overflow = '';
+            }
+          }, 3000);
+        })
+        .catch(() => {
+          submitBtn.innerHTML = '✗ Something went wrong. Try again.';
+          submitBtn.style.background = 'var(--clr-coral)';
+          setTimeout(() => {
+            submitBtn.innerHTML = originalText;
+            submitBtn.style.background = '';
+            submitBtn.disabled = false;
+          }, 3000);
+        });
     });
   }
 
-  // ── Other non-contact, non-apply forms (keep demo behavior) ──
-  document.querySelectorAll('form:not(#contact-form):not(#apply-form)').forEach(form => {
+  // ── Reserve modal handling ──
+  const reserveOverlay = document.getElementById('modal-reserve');
+  if (reserveOverlay) {
+    document.querySelectorAll('[data-modal="reserve"]').forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        e.preventDefault();
+        const room = btn.dataset.reserveRoom || '';
+        const location = btn.dataset.reserveLocation || '';
+        document.getElementById('reserve-room').value = room;
+        document.getElementById('reserve-location').value = location;
+        document.getElementById('reserveRoomLabel').textContent = room;
+        document.getElementById('reserveLocationLabel').textContent = location;
+        reserveOverlay.classList.add('active');
+        document.body.style.overflow = 'hidden';
+      });
+    });
+
+    const reserveClose = reserveOverlay.querySelector('.modal__close');
+    if (reserveClose) {
+      reserveClose.addEventListener('click', () => {
+        reserveOverlay.classList.remove('active');
+        document.body.style.overflow = '';
+      });
+    }
+
+    reserveOverlay.addEventListener('click', (e) => {
+      if (e.target === reserveOverlay) {
+        reserveOverlay.classList.remove('active');
+        document.body.style.overflow = '';
+      }
+    });
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && reserveOverlay.classList.contains('active')) {
+        reserveOverlay.classList.remove('active');
+        document.body.style.overflow = '';
+      }
+    });
+  }
+
+  // ── Reserve form submission ──
+  const reserveForm = document.getElementById('reserve-form');
+  if (reserveForm) {
+    reserveForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const submitBtn = reserveForm.querySelector('[type="submit"]');
+      const originalText = submitBtn.innerHTML;
+      submitBtn.innerHTML = 'Reserving...';
+      submitBtn.disabled = true;
+
+      const name = document.getElementById('reserve-name')?.value || '';
+      const email = document.getElementById('reserve-email')?.value || '';
+      const phone = document.getElementById('reserve-phone')?.value || '';
+      const moveIn = document.getElementById('reserve-move')?.value || '';
+      const room = document.getElementById('reserve-room')?.value || '';
+      const location = document.getElementById('reserve-location')?.value || '';
+
+      forwardToBackend('reservations', {
+        fullName: name,
+        email: email,
+        phone: phone || null,
+        moveInDate: moveIn || null,
+        roomType: room,
+        location: location,
+        sourceWebsite: 'nookrent.com',
+        city: 'London'
+      })
+        .then(() => {
+          submitBtn.innerHTML = '✓ Reserved! We\'ll be in touch 🎉';
+          submitBtn.style.background = 'var(--clr-sage)';
+          setTimeout(() => {
+            submitBtn.innerHTML = originalText;
+            submitBtn.style.background = '';
+            submitBtn.disabled = false;
+            reserveForm.reset();
+            reserveOverlay.classList.remove('active');
+            document.body.style.overflow = '';
+          }, 3000);
+        })
+        .catch(() => {
+          submitBtn.innerHTML = '✗ Something went wrong. Try again.';
+          submitBtn.style.background = 'var(--clr-coral)';
+          setTimeout(() => {
+            submitBtn.innerHTML = originalText;
+            submitBtn.style.background = '';
+            submitBtn.disabled = false;
+          }, 3000);
+        });
+    });
+  }
+
+  // ── Other non-contact, non-apply, non-reserve forms (keep demo behavior) ──
+  document.querySelectorAll('form:not(#contact-form):not(#apply-form):not(#reserve-form)').forEach(form => {
     form.addEventListener('submit', (e) => {
       e.preventDefault();
       const submitBtn = form.querySelector('[type="submit"]');
