@@ -245,6 +245,11 @@ h1, h2, h3, h4, h5, h6 {
 #modal-reserve .modal {
   padding: 1.25rem 1.5rem;
   max-width: 440px;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+#modal-reserve .modal::-webkit-scrollbar {
+  display: none;
 }
 #modal-reserve .modal h2 {
   margin-bottom: 0.25rem;

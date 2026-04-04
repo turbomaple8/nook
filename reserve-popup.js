@@ -186,7 +186,7 @@
     overlay.id = 'rpStandaloneReserve';
     overlay.style.cssText = 'position:fixed;inset:0;z-index:10001;display:flex;align-items:center;justify-content:center;padding:1rem;background:rgba(66,48,32,0.5);';
     overlay.innerHTML = '\
-      <div class="modal" style="position:relative;">\
+      <div class="modal" style="position:relative;scrollbar-width:none;-ms-overflow-style:none;">\
         <button class="modal__close" data-close-rp>&times;</button>\
         <h2>Reserve Your Room 🏡</h2>\
         <p style="margin-bottom:1rem;color:var(--clr-text-light,#777);">No payment required. Secure your spot in seconds.</p>\
