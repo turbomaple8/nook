@@ -110,6 +110,14 @@ Nook is a co-living marketing website for furnished shared rooms in London. It's
 - **Unsplash:** Room/neighbourhood images (hotlinked via `images.unsplash.com`)
 - **Google Fonts:** Nunito + Quicksand
 
+## Coliville Shared Backend
+This site forwards application + tour-request submissions to the shared multi-tenant backend so they appear in the central dashboard.
+- **Canonical URL:** `https://coliville-backend-626057356331.us-east1.run.app` (Cloud Run service `coliville-backend`, region `us-east1`)
+- NEVER use `coliville-api-...`. That's an old duplicate service being decommissioned.
+- Hardcoded in `script.js` and `reserve-popup.js` as `BACKEND_API_URL`. `BACKEND_PROJECT_ID = 'nook'`.
+- Forwarded endpoints: `POST /v1/public/applications`, `POST /v1/public/tour-requests`, `POST /v1/public/reservations`.
+- See `/Users/turbomaple/Desktop/Claude/backend-integration/CLAUDE.md` for the full integration spec and field mappings.
+
 ## WhatsApp Contact
 - Phone: +1 (857) 847-7814
 - Email: info@nookrent.com
