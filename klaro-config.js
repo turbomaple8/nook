@@ -79,8 +79,24 @@ var klaroConfig = {
       purposes: ['essential'],
       required: true,
       cookies: [/^klaro/]
+    },
+    {
+      name: 'google-analytics',
+      title: 'Google Analytics 4',
+      description: 'Measures which pages and rooms visitors engage with — helps us improve the site. Uses _ga + _gid cookies (lifetime up to 2 years).',
+      purposes: ['analytics'],
+      cookies: [
+        [/^_ga/, '/', 'nookrent.com'],
+        [/^_gid/, '/', 'nookrent.com'],
+        [/^_gat/, '/', 'nookrent.com']
+      ],
+      callback: function (consent, service) {
+        if (typeof gtag !== 'function') return;
+        gtag('consent', 'update', {
+          'analytics_storage': consent ? 'granted' : 'denied'
+        });
+      }
     }
-    // Analytics services (GA4, GTM) added in INTAKE-R-004
     // Marketing services (Meta Pixel) added in INTAKE-R-005
   ]
 };
