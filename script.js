@@ -132,6 +132,20 @@ document.addEventListener('DOMContentLoaded', () => {
     .then(r => {
       console.log('[Backend] Response:', r.status, r.statusText);
       if (!r.ok) throw new Error('Backend responded with ' + r.status);
+      // GA4 conversion event — fires only on 2xx backend response
+      if (typeof gtag === 'function') {
+        var eventName = endpoint === 'reservations' ? 'reserve_submit'
+                      : endpoint === 'tour-requests' ? 'viewing_request_submit'
+                      : 'contact_submit';
+        var eventValue = endpoint === 'reservations' ? 100
+                       : endpoint === 'tour-requests' ? 50
+                       : 25;
+        gtag('event', eventName, {
+          currency: 'GBP',
+          value: eventValue,
+          form_endpoint: endpoint
+        });
+      }
       return r;
     });
   }
