@@ -234,6 +234,16 @@
           sourceWebsite: 'nookrent.com',
           city: 'London'
         })
+      }).then(function (r) {
+        // GA4 conversion event — fires only on 2xx backend response
+        if (r && r.ok && typeof gtag === 'function') {
+          gtag('event', 'reserve_submit', {
+            currency: 'GBP',
+            value: 100,
+            form_endpoint: 'reservations',
+            form_location: 'auto_popup'
+          });
+        }
       }).catch(function () {});
 
       var formParent = e.target.parentElement;
