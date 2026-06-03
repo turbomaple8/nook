@@ -17,7 +17,7 @@ var klaroConfig = {
   storageMethod: 'cookie',
   cookieName: 'klaro',
   cookieExpiresAfterDays: 365,
-  default: false,
+  default: true,
   mustConsent: false,
   acceptAll: true,
   hideDeclineAll: false,
