@@ -119,7 +119,7 @@ This site forwards application + tour-request submissions to the shared multi-te
 - See `/Users/turbomaple/Desktop/Claude/backend-integration/CLAUDE.md` for the full integration spec and field mappings.
 
 ## WhatsApp Contact
-- Phone: +1 (857) 847-7814
+- Phone: +1 (917) 735-6528
 - Email: info@nookrent.com
 
 ## Development Notes
