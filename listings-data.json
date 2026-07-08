@@ -1,717 +1,781 @@
 {
-  "metadata": {
-    "source": "fllat.com",
-    "region": "London, UK",
-    "listing_page_url": "https://fllat.com/london-uk/furnished-shared-rooms-on-rent",
-    "scraped_at": "2026-02-15",
-    "total_listings": 16,
-    "notes": {
-      "data_completeness": "Partial - fllat.com is a Next.js app using React Server Components with client-side hydration. Prices, image URLs, and some amenities are loaded dynamically via JavaScript and are not available in the static HTML/RSC stream. Prices for listings 1-4 were provided by the user from the listing page. Descriptions and features were extracted from detail pages.",
-      "api_investigation": {
-        "endpoints_tried": [
-          "https://fllat.com/api/rooms",
-          "https://fllat.com/api/listings",
-          "https://fllat.com/api/v1/rooms",
-          "https://fllat.com/api/v1/listings",
-          "https://fllat.com/api/properties",
-          "https://fllat.com/graphql",
-          "https://fllat.com/api/graphql",
-          "https://fllat.com/_next/data/london-uk/room/deluxe-room-canary-wharf.json"
-        ],
-        "result": "No public API found. All /api/ endpoints return Next.js RSC HTML or 404. The site does not expose a REST or GraphQL API. Data is server-rendered within React Server Components.",
-        "sitemap": "https://fllat.com/sitemap.xml exists but only contains US listings (Washington DC, New York). London URLs are NOT in the sitemap.",
-        "robots_txt": "No disallow rules. Sitemap references only /sitemap.xml. No London-specific sitemap found."
-      },
-      "technology_stack": {
-        "framework": "Next.js 13+ with App Router and React Server Components",
-        "analytics": ["Google Analytics (G-PMLEB6Y8Y1)", "Google Tag Manager (GTM-WHJMR3WP)"],
-        "rendering": "Server-side rendering with client-side hydration; listing data embedded in RSC stream not accessible via static fetch"
-      }
-    }
+ "metadata": {
+  "source": "fllat.com",
+  "region": "London, UK",
+  "listing_page_url": "https://fllat.com/london-uk/furnished-shared-rooms-on-rent",
+  "scraped_at": "2026-02-15",
+  "total_listings": 16,
+  "notes": {
+   "data_completeness": "Partial - fllat.com is a Next.js app using React Server Components with client-side hydration. Prices, image URLs, and some amenities are loaded dynamically via JavaScript and are not available in the static HTML/RSC stream. Prices for listings 1-4 were provided by the user from the listing page. Descriptions and features were extracted from detail pages.",
+   "api_investigation": {
+    "endpoints_tried": [
+     "https://fllat.com/api/rooms",
+     "https://fllat.com/api/listings",
+     "https://fllat.com/api/v1/rooms",
+     "https://fllat.com/api/v1/listings",
+     "https://fllat.com/api/properties",
+     "https://fllat.com/graphql",
+     "https://fllat.com/api/graphql",
+     "https://fllat.com/_next/data/london-uk/room/deluxe-room-canary-wharf.json"
+    ],
+    "result": "No public API found. All /api/ endpoints return Next.js RSC HTML or 404. The site does not expose a REST or GraphQL API. Data is server-rendered within React Server Components.",
+    "sitemap": "https://fllat.com/sitemap.xml exists but only contains US listings (Washington DC, New York). London URLs are NOT in the sitemap.",
+    "robots_txt": "No disallow rules. Sitemap references only /sitemap.xml. No London-specific sitemap found."
+   },
+   "technology_stack": {
+    "framework": "Next.js 13+ with App Router and React Server Components",
+    "analytics": [
+     "Google Analytics (G-PMLEB6Y8Y1)",
+     "Google Tag Manager (GTM-WHJMR3WP)"
+    ],
+    "rendering": "Server-side rendering with client-side hydration; listing data embedded in RSC stream not accessible via static fetch"
+   }
   },
-  "organization": {
-    "name": "Fllat",
-    "url": "https://fllat.com/",
-    "logo": "https://fllat.com/images/logo.svg",
-    "service_areas": ["US", "GB"],
-    "social_media": {
-      "facebook": "https://www.facebook.com/profile.php?id=61571481563518",
-      "instagram": "https://www.instagram.com/fllatcom/",
-      "linkedin": "https://www.linkedin.com/company/fllat-com"
-    }
-  },
-  "listings": [
-    {
-      "id": 1,
-      "url": "https://fllat.com/london-uk/room/deluxe-room-canary-wharf",
-      "slug": "deluxe-room-canary-wharf",
-      "room_name": "Deluxe Room",
-      "room_type": "Deluxe Room",
-      "category": "Signature luxury product",
-      "location_label": "Canary Wharf",
-      "address": "7 Baltimore Wharf, London, UK",
-      "building_name": "Canary Wharf Residence",
-      "neighborhood": "Canary Wharf",
-      "price": {
-        "amount": 355,
-        "currency": "GBP",
-        "period": "week",
-        "display": "\u00a3355/week",
-        "source": "user-provided from listing page"
-      },
-      "description": "Signature product for luxury living offering premium privacy and comfort. Located in one of the most luxurious highrise buildings in one of the highest-end neighbourhoods in London with views overlooking water.",
-      "room_features": [
-        "Full-size bed",
-        "Study desk",
-        "Nightstand",
-        "60\" Smart TV with streaming device",
-        "Large windows with abundant natural light"
-      ],
-      "building_amenities": [
-        "Swimming pool",
-        "Gym",
-        "Concierge service"
-      ],
-      "transit": "Direct access to Canary Wharf underground station; 5 stops to Central London (under 10 minutes)",
-      "target_audience": "Students and professionals seeking luxury coliving",
-      "bathroom_type": "Shared",
-      "kitchen_type": "Shared",
-      "images": [],
-      "disclaimer": "All pictures shown are for illustration purposes only. The actual room may slightly vary due to the layout. An in-person or virtual visit is recommended before booking."
-    },
-    {
-      "id": 2,
-      "url": "https://fllat.com/london-uk/room/deluxe-room-canary-wharf-or-south-quay",
-      "slug": "deluxe-room-canary-wharf-or-south-quay",
-      "room_name": "Deluxe Room",
-      "room_type": "Deluxe Room",
-      "category": "Signature luxury product",
-      "location_label": "Canary Wharf | South Quay",
-      "address": "Discovery Dock Apartments East, London, UK",
-      "building_name": "South Quay Residence",
-      "neighborhood": "Canary Wharf / South Quay",
-      "price": {
-        "amount": 365,
-        "currency": "GBP",
-        "period": "week",
-        "display": "\u00a3365/week",
-        "source": "user-provided from listing page"
-      },
-      "description": "Signature product for luxury living offering premium privacy and comfort. South Quay Residence is one of the most luxurious highrise buildings in a high-end London neighborhood with water views.",
-      "room_features": [
-        "Full-size bed",
-        "Study desk",
-        "Nightstand",
-        "60\" Smart TV with streaming device",
-        "Large windows with natural light"
-      ],
-      "building_amenities": [
-        "Luxury highrise building amenities"
-      ],
-      "transit": "Less than 2 mins walk to Canary Wharf Jubilee line station and South Quay DLR. Close to One Canada Square and Canary Wharf Shopping complex.",
-      "target_audience": "Students and professionals seeking luxury coliving",
-      "bathroom_type": "Shared",
-      "kitchen_type": "Shared",
-      "nearby": "Abundant shops, bars, and restaurants; One Canada Square; Canary Wharf Shopping complex",
-      "images": [],
-      "disclaimer": "All pictures shown are for illustration purposes only. The actual room may slightly vary due to the layout. An in-person or virtual visit is recommended before booking."
-    },
-    {
-      "id": 3,
-      "url": "https://fllat.com/london-uk/room/deluxe-room-central-london",
-      "slug": "deluxe-room-central-london",
-      "room_name": "Deluxe Room",
-      "room_type": "Deluxe Room",
-      "category": "Signature luxury product",
-      "location_label": "Central London",
-      "address": "238 City Rd, London, UK",
-      "building_name": "Old Street Residence",
-      "neighborhood": "Old Street / Central London",
-      "price": {
-        "amount": 295,
-        "currency": "GBP",
-        "period": "week",
-        "display": "\u00a3295/week",
-        "source": "user-provided from listing page"
-      },
-      "description": "Signature product for luxury living offering premium privacy and comfort. Old Street Residence is ideally and centrally situated with access to trendy eateries, boutiques, and art galleries within walking distance.",
-      "room_features": [
-        "Full-size bed",
-        "Study desk",
-        "Nightstand",
-        "60\" Smart TV with streaming device",
-        "Large windows with natural light"
-      ],
-      "building_amenities": [],
-      "transit": "Central London location with excellent transport links",
-      "target_audience": "Students and professionals",
-      "bathroom_type": "Shared",
-      "kitchen_type": "Shared",
-      "nearby": "Trendy eateries, eclectic boutiques, emerging art galleries",
-      "pricing_note": "Prices shown are for immediate move-in only. Contact for September pricing.",
-      "images": [],
-      "disclaimer": "All pictures shown are for illustration purposes only. The actual room may slightly vary due to the layout. An in-person or virtual visit is recommended before booking."
-    },
-    {
-      "id": 4,
-      "url": "https://fllat.com/london-uk/room/deluxe-room-central-london-or-dingley-road",
-      "slug": "deluxe-room-central-london-or-dingley-road",
-      "room_name": "Deluxe Room",
-      "room_type": "Deluxe Room",
-      "category": "Signature luxury product",
-      "location_label": "Central London | Dingley Road",
-      "address": "22 Dingley Rd, London, UK",
-      "building_name": "Dingley Road Residence",
-      "neighborhood": "Central London / Dingley Road",
-      "price": {
-        "amount": 285,
-        "currency": "GBP",
-        "period": "week",
-        "display": "\u00a3285/week",
-        "source": "user-provided from listing page"
-      },
-      "description": "Signature product for luxury living offering premium privacy and comfort. Located in central London near Dingley Road with green spaces, funky coffee houses, and eclectic eating places nearby.",
-      "room_features": [
-        "Full-size bed",
-        "Study desk",
-        "Nightstand",
-        "60\" Smart TV with streaming device",
-        "Large windows with natural light"
-      ],
-      "building_amenities": [],
-      "transit": "Central London location",
-      "target_audience": "Students and professionals",
-      "bathroom_type": "Shared",
-      "kitchen_type": "Shared",
-      "nearby": "Green spaces, funky coffee houses, eclectic eating places, trendy restaurants, boutiques, art galleries",
-      "pricing_note": "Prices shown are for immediate move-in only. Contact for September pricing.",
-      "images": [],
-      "disclaimer": "All pictures shown are for illustration purposes only. The actual room may slightly vary due to the layout. An in-person or virtual visit is recommended before booking."
-    },
-    {
-      "id": 5,
-      "url": "https://fllat.com/london-uk/room/deluxe-room-islington-or-whitechapel",
-      "slug": "deluxe-room-islington-or-whitechapel",
-      "room_name": "Deluxe Room",
-      "room_type": "Deluxe Room",
-      "category": "Coliving room",
-      "location_label": "Islington | Whitechapel",
-      "address": "Provost Street, London, UK",
-      "building_name": "Provost Street Residence",
-      "neighborhood": "Islington / Whitechapel",
-      "price": {
-        "amount": null,
-        "currency": "GBP",
-        "period": "week",
-        "display": "Not available - requires JavaScript rendering",
-        "source": "not extracted"
-      },
-      "description": "Your perfect home away from home! This cozy, fully furnished room offers a comfy bed, a dedicated workspace with heating and utilities included. Ideal for students and professionals near Old Street Station.",
-      "room_features": [
-        "Fully furnished",
-        "Comfy bed",
-        "Dedicated workspace",
-        "Heating included",
-        "Utilities included"
-      ],
-      "building_amenities": [],
-      "transit": "Near Old Street Station with access to Northern Line and major bus routes. Convenient to City, University of London and Tech City (Silicon Roundabout).",
-      "target_audience": "Students and professionals",
-      "bathroom_type": "Shared",
-      "kitchen_type": "Shared",
-      "nearby": "Indie cafes, Angel's boutiques, Shoreditch Park; proximity to Shoreditch, the City, and Canary Wharf",
-      "images": [],
-      "disclaimer": "All pictures shown are for illustration purposes only. The actual room may slightly vary due to the layout."
-    },
-    {
-      "id": 6,
-      "url": "https://fllat.com/london-uk/room/flex-basic-canary-wharf-or-south-quay",
-      "slug": "flex-basic-canary-wharf-or-south-quay",
-      "room_name": "Flex Basic",
-      "room_type": "Flex Basic",
-      "category": "Budget-friendly coliving option",
-      "location_label": "Canary Wharf | South Quay",
-      "address": "South Quay Residence, London, UK",
-      "building_name": "South Quay Residence",
-      "neighborhood": "Canary Wharf / South Quay",
-      "price": {
-        "amount": null,
-        "currency": "GBP",
-        "period": "week",
-        "display": "Not available - requires JavaScript rendering",
-        "source": "not extracted"
-      },
-      "description": "Budget-friendly option featuring a single-size bed, smart TV, separated from the rest of the suite with a smart bookcase system. Offers privacy with quality furnishings at reasonable rates. The bookcase divider does not provide complete sound isolation.",
-      "room_features": [
-        "Single-size bed",
-        "Smart TV",
-        "Smart bookcase system partition (not fully soundproof)",
-        "Quality furnishings"
-      ],
-      "building_amenities": [
-        "Luxury highrise building amenities"
-      ],
-      "transit": "Less than 2 minute walk to Canary Wharf Jubilee line station and South Quay DLR station",
-      "target_audience": "Budget-conscious residents seeking luxury location",
-      "bathroom_type": "Shared",
-      "kitchen_type": "Shared",
-      "nearby": "One Canada Square, Canary Wharf Shopping complex, shops, bars and restaurants in abundance; water views",
-      "images": [],
-      "disclaimer": "All pictures shown are for illustration purposes only. The actual room may slightly vary due to the layout. An in-person or virtual visit is recommended before booking."
-    },
-    {
-      "id": 7,
-      "url": "https://fllat.com/london-uk/room/flex-basic-central-london",
-      "slug": "flex-basic-central-london",
-      "room_name": "Flex Basic",
-      "room_type": "Flex Basic",
-      "category": "Budget-friendly coliving option",
-      "location_label": "Central London",
-      "address": "Old Street Residence, London, UK",
-      "building_name": "Old Street Residence",
-      "neighborhood": "Old Street / Central London",
-      "price": {
-        "amount": null,
-        "currency": "GBP",
-        "period": "week",
-        "display": "Not available - requires JavaScript rendering",
-        "source": "not extracted"
-      },
-      "description": "Budget-friendly option featuring a single-size bed, smart TV, separated from the suite by a smart bookcase system. Offers the best price/performance ratio for luxury high rise living in the city center. The bookcase system does not fully insulate the area.",
-      "room_features": [
-        "Single-size bed",
-        "Smart TV",
-        "Smart bookcase system partition (not fully soundproof)"
-      ],
-      "building_amenities": [],
-      "transit": "Centrally situated in Old Street area",
-      "target_audience": "Budget-conscious residents seeking central location",
-      "bathroom_type": "Shared",
-      "kitchen_type": "Shared",
-      "nearby": "Trendy eateries, eclectic boutiques, emerging art galleries, green spaces, funky coffee houses",
-      "pricing_note": "Prices shown are for immediate move-in. Contact for September pricing.",
-      "images": [],
-      "disclaimer": "All pictures shown are for illustration purposes only. The actual room may slightly vary due to the layout. An in-person or virtual visit is recommended before booking."
-    },
-    {
-      "id": 8,
-      "url": "https://fllat.com/london-uk/room/flex-basic-central-london-or-dingley-road",
-      "slug": "flex-basic-central-london-or-dingley-road",
-      "room_name": "Flex Basic",
-      "room_type": "Flex Basic",
-      "category": "Budget-friendly coliving option",
-      "location_label": "Central London | Dingley Road",
-      "address": "Dingley Road, Central London, UK",
-      "building_name": "Dingley Road Residence",
-      "neighborhood": "Central London / Dingley Road",
-      "price": {
-        "amount": null,
-        "currency": "GBP",
-        "period": "week",
-        "display": "Not available - requires JavaScript rendering",
-        "source": "not extracted"
-      },
-      "description": "Budget-friendly option featuring a single-size bed, smart TV, separated from the rest of the suite with a smart bookcase system. The bookcase provides privacy but does not fully insulate the area. Best price/performance ratio for luxury high rise city living.",
-      "room_features": [
-        "Single-size bed",
-        "Smart TV",
-        "Smart bookcase system partition (not fully soundproof)",
-        "Private room setup within suite"
-      ],
-      "building_amenities": [],
-      "transit": "Centrally situated location",
-      "target_audience": "Budget-conscious residents",
-      "bathroom_type": "Shared",
-      "kitchen_type": "Shared",
-      "nearby": "Green spaces, funky coffee houses, eclectic eating places, trendy eateries, boutiques, art galleries",
-      "pricing_note": "Prices shown are for immediate move-in. Contact for September pricing.",
-      "images": [],
-      "disclaimer": "All pictures shown are for illustration purposes only. The actual room may slightly vary due to the layout. An in-person or virtual visit is recommended before booking."
-    },
-    {
-      "id": 9,
-      "url": "https://fllat.com/london-uk/room/flex-plus-canary-wharf",
-      "slug": "flex-plus-canary-wharf",
-      "room_name": "Flex Plus",
-      "room_type": "Flex Plus",
-      "category": "Budget-friendly coliving option with upgrades",
-      "location_label": "Canary Wharf",
-      "address": "Canary Wharf Residence, London, UK",
-      "building_name": "Canary Wharf Residence",
-      "neighborhood": "Canary Wharf",
-      "price": {
-        "amount": null,
-        "currency": "GBP",
-        "period": "week",
-        "display": "Not available - requires JavaScript rendering",
-        "source": "not extracted"
-      },
-      "description": "Budget-friendly option with excellent price/performance ratio. Features a single-size bed, smart TV, and smart bookcase system for privacy (does not fully insulate the area). Located in a luxury high-rise with premium views right above the water.",
-      "room_features": [
-        "Single-size bed",
-        "Smart TV",
-        "Smart bookcase system partition (not fully soundproof)"
-      ],
-      "building_amenities": [
-        "Swimming pool",
-        "Gym",
-        "Concierge service"
-      ],
-      "transit": "Across from Canary Wharf Underground station; 5 stops to Central London (under 10 minutes)",
-      "target_audience": "Budget-conscious residents seeking luxury location",
-      "bathroom_type": "Shared",
-      "kitchen_type": "Shared",
-      "nearby": "One of London's highest-end neighbourhoods with water views",
-      "images": [],
-      "disclaimer": "All pictures shown are for illustration purposes only. The actual room may slightly vary due to the layout. An in-person or virtual visit is recommended before booking."
-    },
-    {
-      "id": 10,
-      "url": "https://fllat.com/london-uk/room/flex-plus-with-balcony-canary-wharf-or-south-quay",
-      "slug": "flex-plus-with-balcony-canary-wharf-or-south-quay",
-      "room_name": "Flex Plus with Balcony",
-      "room_type": "Flex Plus with Balcony",
-      "category": "Budget-friendly coliving option with balcony",
-      "location_label": "Canary Wharf | South Quay",
-      "address": "South Quay Residence, London, UK",
-      "building_name": "South Quay Residence",
-      "neighborhood": "Canary Wharf / South Quay",
-      "price": {
-        "amount": null,
-        "currency": "GBP",
-        "period": "week",
-        "display": "Not available - requires JavaScript rendering",
-        "source": "not extracted"
-      },
-      "description": "Budget-friendly option with balcony access. Features a single bed, smart TV, partitioned using a smart bookcase system for privacy (does not offer full soundproofing). Excellent value for luxury high rise living in the heart of the city.",
-      "room_features": [
-        "Single-size bed",
-        "Smart TV",
-        "Smart bookcase system partition (not fully soundproof)",
-        "Balcony access",
-        "Quality furniture included"
-      ],
-      "building_amenities": [
-        "Luxury highrise building amenities"
-      ],
-      "transit": "Less than 2 minutes walk to Canary Wharf Jubilee line and South Quay DLR stations",
-      "target_audience": "Budget-conscious residents seeking luxury location with outdoor space",
-      "bathroom_type": "Shared",
-      "kitchen_type": "Shared",
-      "nearby": "One Canada Square, Canary Wharf Shopping complex, water-view location",
-      "images": [],
-      "disclaimer": "All pictures shown are for illustration purposes only. The actual room may slightly vary due to the layout. An in-person or virtual visit is recommended before booking."
-    },
-    {
-      "id": 11,
-      "url": "https://fllat.com/london-uk/room/flex-premium-central-london",
-      "slug": "flex-premium-central-london",
-      "room_name": "Flex Premium",
-      "room_type": "Flex Premium",
-      "category": "Premium coliving option with private balcony",
-      "location_label": "Central London",
-      "address": "Old Street Residence, London, UK",
-      "building_name": "Old Street Residence",
-      "neighborhood": "Old Street / Central London",
-      "price": {
-        "amount": null,
-        "currency": "GBP",
-        "period": "week",
-        "display": "Not available - requires JavaScript rendering",
-        "source": "not extracted"
-      },
-      "description": "Bright room with private balcony and spacious area. Features a study desk, nightstand, 50\" Smart TV with streaming device. Uses a modular smart block system with abundant natural light from large windows.",
-      "room_features": [
-        "Private balcony",
-        "Study desk",
-        "Nightstand",
-        "50\" Smart TV with streaming device",
-        "Modular smart block system",
-        "Large windows for natural light",
-        "Spacious area"
-      ],
-      "building_amenities": [],
-      "transit": "Centrally situated in Old Street area with excellent transport links",
-      "target_audience": "Professionals and students seeking premium space with outdoor access",
-      "bathroom_type": "Shared",
-      "kitchen_type": "Shared",
-      "nearby": "Trendy eateries, eclectic boutiques, emerging art galleries, green spaces, funky coffee houses",
-      "pricing_note": "Prices shown are for immediate move-in. Contact for September pricing.",
-      "images": [],
-      "disclaimer": "All pictures shown are for illustration purposes only. The actual room may slightly vary due to the layout. An in-person or virtual visit is recommended before booking."
-    },
-    {
-      "id": 12,
-      "url": "https://fllat.com/london-uk/room/master-room-and-ensuite-bath-canary-wharf-or-south-quay",
-      "slug": "master-room-and-ensuite-bath-canary-wharf-or-south-quay",
-      "room_name": "Master Room & Ensuite Bath",
-      "room_type": "Master Room with Ensuite Bathroom",
-      "category": "Most spacious and luxury bedroom type",
-      "location_label": "Canary Wharf | South Quay",
-      "address": "South Quay Residence, London, UK",
-      "building_name": "South Quay Residence",
-      "neighborhood": "Canary Wharf / South Quay",
-      "price": {
-        "amount": null,
-        "currency": "GBP",
-        "period": "week",
-        "display": "Not available - requires JavaScript rendering",
-        "source": "not extracted"
-      },
-      "description": "The most spacious and luxury bedroom type featuring a full-size bed, study desk, nightstand, 60\" Smart TV, and streaming device. Private ensuite bathroom provides the feeling of living in a studio. Large windows allow natural light.",
-      "room_features": [
-        "Full-size bed",
-        "Study desk",
-        "Nightstand",
-        "60\" Smart TV with streaming device",
-        "Private ensuite bathroom (exclusive use)",
-        "Large windows with natural light",
-        "Studio-like living experience"
-      ],
-      "building_amenities": [
-        "Luxury highrise building amenities"
-      ],
-      "transit": "Less than 2 minutes walk to Canary Wharf Jubilee line and South Quay DLR stations; water views",
-      "target_audience": "Students seeking ultimate privacy and comfort",
-      "bathroom_type": "Private ensuite",
-      "kitchen_type": "Shared",
-      "nearby": "One Canada Square, Canary Wharf Shopping complex, water-view location",
-      "images": [],
-      "disclaimer": "All pictures shown are for illustration purposes only. The actual room may slightly vary due to the layout. An in-person or virtual visit is recommended before booking."
-    },
-    {
-      "id": 13,
-      "url": "https://fllat.com/london-uk/room/master-room-and-ensuite-bath-canary-wharf",
-      "slug": "master-room-and-ensuite-bath-canary-wharf",
-      "room_name": "Master Room & Ensuite Bath",
-      "room_type": "Master Room with Ensuite Bathroom",
-      "category": "Most spacious and luxury bedroom type",
-      "location_label": "Canary Wharf",
-      "address": "Canary Wharf Residence, London, UK",
-      "building_name": "Canary Wharf Residence",
-      "neighborhood": "Canary Wharf",
-      "price": {
-        "amount": null,
-        "currency": "GBP",
-        "period": "week",
-        "display": "Not available - requires JavaScript rendering",
-        "source": "not extracted"
-      },
-      "description": "The most spacious and luxury bedroom type with a private ensuite bathroom for exclusive occupant use. Features a full-size bed, study desk, nightstand, 60\" Smart TV with streaming device. Creates a studio-like living experience. Located in a super luxurious highrise building with amazing water views.",
-      "room_features": [
-        "Full-size bed",
-        "Study desk",
-        "Nightstand",
-        "60\" Smart TV with streaming device",
-        "Private ensuite bathroom (exclusive use)",
-        "Large windows with natural light",
-        "Studio-like living experience"
-      ],
-      "building_amenities": [
-        "Swimming pool",
-        "Gym",
-        "Concierge service"
-      ],
-      "transit": "Across from Canary Wharf underground station; 5 stops to Central London (under 10 minutes); amazing water views",
-      "target_audience": "Students seeking ultimate privacy and comfort",
-      "bathroom_type": "Private ensuite",
-      "kitchen_type": "Shared",
-      "images": [],
-      "disclaimer": "All pictures shown are for illustration purposes only. The actual room may slightly vary due to the layout. An in-person or virtual visit is recommended before booking."
-    },
-    {
-      "id": 14,
-      "url": "https://fllat.com/london-uk/room/master-room-and-ensuite-bath-central-london",
-      "slug": "master-room-and-ensuite-bath-central-london",
-      "room_name": "Master Room & Ensuite Bath",
-      "room_type": "Master Room with Ensuite Bathroom",
-      "category": "Most spacious and luxury bedroom type",
-      "location_label": "Central London",
-      "address": "Old Street Residence, London, UK",
-      "building_name": "Old Street Residence",
-      "neighborhood": "Old Street / Central London",
-      "price": {
-        "amount": null,
-        "currency": "GBP",
-        "period": "week",
-        "display": "Not available - requires JavaScript rendering",
-        "source": "not extracted"
-      },
-      "description": "The most spacious and luxury bedroom type equipped with a full-size bed, private/ensuite bathroom for exclusive occupant use, study desk, nightstand, 60\" Smart TV with streaming device. Large windows provide abundant natural light. Positioned as ideal for students seeking privacy and comfort.",
-      "room_features": [
-        "Full-size bed",
-        "Study desk",
-        "Nightstand",
-        "60\" Smart TV with streaming device",
-        "Private ensuite bathroom (exclusive use)",
-        "Large windows with natural light",
-        "Studio-like living experience"
-      ],
-      "building_amenities": [],
-      "transit": "Old Street area, centrally situated",
-      "target_audience": "Students seeking ultimate privacy and comfort",
-      "bathroom_type": "Private ensuite",
-      "kitchen_type": "Shared",
-      "nearby": "Trendy eateries, eclectic boutiques, emerging art galleries, green spaces, funky coffee houses",
-      "images": [],
-      "disclaimer": "All pictures shown are for illustration purposes only. The actual room may slightly vary due to the layout."
-    },
-    {
-      "id": 15,
-      "url": "https://fllat.com/london-uk/room/master-room-and-ensuite-bath-central-london-or-dingley-road",
-      "slug": "master-room-and-ensuite-bath-central-london-or-dingley-road",
-      "room_name": "Master Room & Ensuite Bath",
-      "room_type": "Master Room with Ensuite Bathroom",
-      "category": "Most spacious and luxury bedroom type",
-      "location_label": "Central London | Dingley Road",
-      "address": "Dingley Road, Central London, UK",
-      "building_name": "Dingley Road Residence",
-      "neighborhood": "Central London / Dingley Road",
-      "price": {
-        "amount": null,
-        "currency": "GBP",
-        "period": "week",
-        "display": "Not available - requires JavaScript rendering",
-        "source": "not extracted"
-      },
-      "description": "The most spacious and luxury bedroom type featuring a private ensuite bathroom for exclusive occupant use. Full-size bed, study desk, nightstand, 60\" Smart TV with streaming device. Large windows provide natural light. Creates a studio-like living experience.",
-      "room_features": [
-        "Full-size bed",
-        "Study desk",
-        "Nightstand",
-        "60\" Smart TV with streaming device",
-        "Private ensuite bathroom (exclusive use)",
-        "Large windows with natural light",
-        "Studio-like living experience"
-      ],
-      "building_amenities": [],
-      "transit": "Central London location near Dingley Road",
-      "target_audience": "Students seeking ultimate privacy and comfort",
-      "bathroom_type": "Private ensuite",
-      "kitchen_type": "Shared",
-      "nearby": "Green spaces, funky coffee houses, eclectic eating places, trendy eateries, boutiques, art galleries",
-      "images": [],
-      "disclaimer": "All pictures shown are for illustration purposes only. The actual room may slightly vary due to the layout. An in-person or virtual visit is recommended before booking."
-    },
-    {
-      "id": 16,
-      "url": "https://fllat.com/london-uk/room/master-room-and-ensuite-bath-islington-or-whitechapel",
-      "slug": "master-room-and-ensuite-bath-islington-or-whitechapel",
-      "room_name": "Master Room & Ensuite Bath",
-      "room_type": "Master Room with Ensuite Bathroom",
-      "category": "Most spacious and luxury bedroom type",
-      "location_label": "Islington | Whitechapel",
-      "address": "Islington/Whitechapel area, London, UK",
-      "building_name": "Islington/Whitechapel Residence",
-      "neighborhood": "Islington / Whitechapel",
-      "price": {
-        "amount": null,
-        "currency": "GBP",
-        "period": "week",
-        "display": "Not available - requires JavaScript rendering",
-        "source": "not extracted"
-      },
-      "description": "The most spacious and luxury bedroom type with private ensuite bathroom. This listing's detail page returned minimal data due to Next.js client-side rendering limitations.",
-      "room_features": [
-        "Full-size bed (inferred from room type)",
-        "Study desk (inferred from room type)",
-        "Nightstand (inferred from room type)",
-        "60\" Smart TV with streaming device (inferred from room type)",
-        "Private ensuite bathroom (exclusive use)",
-        "Large windows with natural light (inferred from room type)"
-      ],
-      "building_amenities": [],
-      "transit": "London location",
-      "target_audience": "Students seeking ultimate privacy and comfort",
-      "bathroom_type": "Private ensuite",
-      "kitchen_type": "Shared",
-      "images": [],
-      "disclaimer": "All pictures shown are for illustration purposes only. The actual room may slightly vary due to the layout."
-    }
-  ],
-  "room_type_summary": {
-    "Deluxe Room": {
-      "count": 5,
-      "description": "Signature luxury product with full-size bed, study desk, nightstand, 60\" Smart TV with streaming device, large windows",
-      "bathroom": "Shared",
-      "listings": [1, 2, 3, 4, 5]
-    },
-    "Flex Basic": {
-      "count": 3,
-      "description": "Budget-friendly option with single-size bed, smart TV, separated by smart bookcase system (not fully soundproof)",
-      "bathroom": "Shared",
-      "listings": [6, 7, 8]
-    },
-    "Flex Plus": {
-      "count": 2,
-      "description": "Budget-friendly option similar to Flex Basic with upgrades. Single bed, smart TV, bookcase partition",
-      "bathroom": "Shared",
-      "listings": [9, 10]
-    },
-    "Flex Premium": {
-      "count": 1,
-      "description": "Premium option with private balcony, spacious area, study desk, nightstand, 50\" Smart TV, modular smart block system",
-      "bathroom": "Shared",
-      "listings": [11]
-    },
-    "Master Room & Ensuite Bath": {
-      "count": 5,
-      "description": "Most spacious and luxury type with private ensuite bathroom, full-size bed, study desk, nightstand, 60\" Smart TV. Studio-like experience.",
-      "bathroom": "Private ensuite",
-      "listings": [12, 13, 14, 15, 16]
-    }
-  },
-  "building_summary": {
-    "Canary Wharf Residence": {
-      "address": "7 Baltimore Wharf, London, UK",
-      "area": "Canary Wharf",
-      "amenities": ["Swimming pool", "Gym", "Concierge service"],
-      "description": "Super luxurious highrise building with water views, across from Canary Wharf underground station",
-      "transit": "5 stops to Central London (under 10 minutes)",
-      "listings": [1, 9, 13]
-    },
-    "South Quay Residence": {
-      "address": "Discovery Dock Apartments East, London, UK",
-      "area": "Canary Wharf / South Quay",
-      "amenities": ["Luxury highrise building amenities"],
-      "description": "One of the most luxurious highrise buildings in a high-end London neighborhood with water views",
-      "transit": "Less than 2 mins walk to Canary Wharf Jubilee line and South Quay DLR",
-      "nearby": "One Canada Square, Canary Wharf Shopping complex",
-      "listings": [2, 6, 10, 12]
-    },
-    "Old Street Residence": {
-      "address": "238 City Rd, London, UK",
-      "area": "Old Street / Central London",
-      "amenities": [],
-      "description": "Ideally and centrally situated with trendy eateries, boutiques, and art galleries nearby",
-      "transit": "Central London location",
-      "nearby": "Trendy eateries, eclectic boutiques, emerging art galleries, green spaces",
-      "listings": [3, 7, 11, 14]
-    },
-    "Dingley Road Residence": {
-      "address": "22 Dingley Rd, London, UK",
-      "area": "Central London / Dingley Road",
-      "amenities": [],
-      "description": "Central London location near Dingley Road with green spaces and eclectic dining",
-      "transit": "Central London location",
-      "nearby": "Green spaces, funky coffee houses, eclectic eating places, boutiques, art galleries",
-      "listings": [4, 8, 15]
-    },
-    "Provost Street Residence": {
-      "address": "Provost Street, London, UK",
-      "area": "Islington / Whitechapel",
-      "amenities": [],
-      "description": "Convenient location near Old Street Station for students and professionals",
-      "transit": "Near Old Street Station (Northern Line), major bus routes",
-      "nearby": "Indie cafes, Angel's boutiques, Shoreditch Park, Silicon Roundabout",
-      "listings": [5]
-    },
-    "Islington/Whitechapel Residence": {
-      "address": "Islington/Whitechapel area, London, UK",
-      "area": "Islington / Whitechapel",
-      "amenities": [],
-      "description": "London coliving location in Islington/Whitechapel area",
-      "listings": [16]
-    }
+  "price_refresh": {
+   "date": "2026-07-08",
+   "method": "playwright headless render of each fllat.com detail page ('Weekly Rent' figure, discounted effective price where % off shown)",
+   "catalog_drift": [
+    "master-room-and-ensuite-bath-islington-or-whitechapel delisted on fllat.com",
+    "NEW on fllat.com, not on nook: master-room-and-ensuite-bath-with-private-balcony-canary-wharf-or-south-quay at £375/week (5% off)"
+   ]
   }
+ },
+ "organization": {
+  "name": "Fllat",
+  "url": "https://fllat.com/",
+  "logo": "https://fllat.com/images/logo.svg",
+  "service_areas": [
+   "US",
+   "GB"
+  ],
+  "social_media": {
+   "facebook": "https://www.facebook.com/profile.php?id=61571481563518",
+   "instagram": "https://www.instagram.com/fllatcom/",
+   "linkedin": "https://www.linkedin.com/company/fllat-com"
+  }
+ },
+ "listings": [
+  {
+   "id": 1,
+   "url": "https://fllat.com/london-uk/room/deluxe-room-canary-wharf",
+   "slug": "deluxe-room-canary-wharf",
+   "room_name": "Deluxe Room",
+   "room_type": "Deluxe Room",
+   "category": "Signature luxury product",
+   "location_label": "Canary Wharf",
+   "address": "7 Baltimore Wharf, London, UK",
+   "building_name": "Canary Wharf Residence",
+   "neighborhood": "Canary Wharf",
+   "price": {
+    "amount": 355,
+    "currency": "GBP",
+    "period": "week",
+    "display": "£355/week",
+    "source": "scraped from fllat.com detail page (headless render), 2026-07-08"
+   },
+   "description": "Signature product for luxury living offering premium privacy and comfort. Located in one of the most luxurious highrise buildings in one of the highest-end neighbourhoods in London with views overlooking water.",
+   "room_features": [
+    "Full-size bed",
+    "Study desk",
+    "Nightstand",
+    "60\" Smart TV with streaming device",
+    "Large windows with abundant natural light"
+   ],
+   "building_amenities": [
+    "Swimming pool",
+    "Gym",
+    "Concierge service"
+   ],
+   "transit": "Direct access to Canary Wharf underground station; 5 stops to Central London (under 10 minutes)",
+   "target_audience": "Students and professionals seeking luxury coliving",
+   "bathroom_type": "Shared",
+   "kitchen_type": "Shared",
+   "images": [],
+   "disclaimer": "All pictures shown are for illustration purposes only. The actual room may slightly vary due to the layout. An in-person or virtual visit is recommended before booking."
+  },
+  {
+   "id": 2,
+   "url": "https://fllat.com/london-uk/room/deluxe-room-canary-wharf-or-south-quay",
+   "slug": "deluxe-room-canary-wharf-or-south-quay",
+   "room_name": "Deluxe Room",
+   "room_type": "Deluxe Room",
+   "category": "Signature luxury product",
+   "location_label": "Canary Wharf | South Quay",
+   "address": "Discovery Dock Apartments East, London, UK",
+   "building_name": "South Quay Residence",
+   "neighborhood": "Canary Wharf / South Quay",
+   "price": {
+    "amount": 365,
+    "currency": "GBP",
+    "period": "week",
+    "display": "£365/week",
+    "source": "scraped from fllat.com detail page (headless render), 2026-07-08"
+   },
+   "description": "Signature product for luxury living offering premium privacy and comfort. South Quay Residence is one of the most luxurious highrise buildings in a high-end London neighborhood with water views.",
+   "room_features": [
+    "Full-size bed",
+    "Study desk",
+    "Nightstand",
+    "60\" Smart TV with streaming device",
+    "Large windows with natural light"
+   ],
+   "building_amenities": [
+    "Luxury highrise building amenities"
+   ],
+   "transit": "Less than 2 mins walk to Canary Wharf Jubilee line station and South Quay DLR. Close to One Canada Square and Canary Wharf Shopping complex.",
+   "target_audience": "Students and professionals seeking luxury coliving",
+   "bathroom_type": "Shared",
+   "kitchen_type": "Shared",
+   "nearby": "Abundant shops, bars, and restaurants; One Canada Square; Canary Wharf Shopping complex",
+   "images": [],
+   "disclaimer": "All pictures shown are for illustration purposes only. The actual room may slightly vary due to the layout. An in-person or virtual visit is recommended before booking."
+  },
+  {
+   "id": 3,
+   "url": "https://fllat.com/london-uk/room/deluxe-room-central-london",
+   "slug": "deluxe-room-central-london",
+   "room_name": "Deluxe Room",
+   "room_type": "Deluxe Room",
+   "category": "Signature luxury product",
+   "location_label": "Central London",
+   "address": "238 City Rd, London, UK",
+   "building_name": "Old Street Residence",
+   "neighborhood": "Old Street / Central London",
+   "price": {
+    "amount": 295,
+    "currency": "GBP",
+    "period": "week",
+    "display": "£295/week",
+    "source": "scraped from fllat.com detail page (headless render), 2026-07-08"
+   },
+   "description": "Signature product for luxury living offering premium privacy and comfort. Old Street Residence is ideally and centrally situated with access to trendy eateries, boutiques, and art galleries within walking distance.",
+   "room_features": [
+    "Full-size bed",
+    "Study desk",
+    "Nightstand",
+    "60\" Smart TV with streaming device",
+    "Large windows with natural light"
+   ],
+   "building_amenities": [],
+   "transit": "Central London location with excellent transport links",
+   "target_audience": "Students and professionals",
+   "bathroom_type": "Shared",
+   "kitchen_type": "Shared",
+   "nearby": "Trendy eateries, eclectic boutiques, emerging art galleries",
+   "pricing_note": "Prices shown are for immediate move-in only. Contact for September pricing.",
+   "images": [],
+   "disclaimer": "All pictures shown are for illustration purposes only. The actual room may slightly vary due to the layout. An in-person or virtual visit is recommended before booking."
+  },
+  {
+   "id": 4,
+   "url": "https://fllat.com/london-uk/room/deluxe-room-central-london-or-dingley-road",
+   "slug": "deluxe-room-central-london-or-dingley-road",
+   "room_name": "Deluxe Room",
+   "room_type": "Deluxe Room",
+   "category": "Signature luxury product",
+   "location_label": "Central London | Dingley Road",
+   "address": "22 Dingley Rd, London, UK",
+   "building_name": "Dingley Road Residence",
+   "neighborhood": "Central London / Dingley Road",
+   "price": {
+    "amount": 315,
+    "currency": "GBP",
+    "period": "week",
+    "display": "£315/week",
+    "source": "scraped from fllat.com detail page (headless render), 2026-07-08"
+   },
+   "description": "Signature product for luxury living offering premium privacy and comfort. Located in central London near Dingley Road with green spaces, funky coffee houses, and eclectic eating places nearby.",
+   "room_features": [
+    "Full-size bed",
+    "Study desk",
+    "Nightstand",
+    "60\" Smart TV with streaming device",
+    "Large windows with natural light"
+   ],
+   "building_amenities": [],
+   "transit": "Central London location",
+   "target_audience": "Students and professionals",
+   "bathroom_type": "Shared",
+   "kitchen_type": "Shared",
+   "nearby": "Green spaces, funky coffee houses, eclectic eating places, trendy restaurants, boutiques, art galleries",
+   "pricing_note": "Prices shown are for immediate move-in only. Contact for September pricing.",
+   "images": [],
+   "disclaimer": "All pictures shown are for illustration purposes only. The actual room may slightly vary due to the layout. An in-person or virtual visit is recommended before booking."
+  },
+  {
+   "id": 5,
+   "url": "https://fllat.com/london-uk/room/deluxe-room-islington-or-whitechapel",
+   "slug": "deluxe-room-islington-or-whitechapel",
+   "room_name": "Deluxe Room",
+   "room_type": "Deluxe Room",
+   "category": "Coliving room",
+   "location_label": "Islington | Whitechapel",
+   "address": "Provost Street, London, UK",
+   "building_name": "Provost Street Residence",
+   "neighborhood": "Islington / Whitechapel",
+   "price": {
+    "amount": 235,
+    "currency": "GBP",
+    "period": "week",
+    "display": "£235/week",
+    "source": "scraped from fllat.com detail page (headless render), 2026-07-08"
+   },
+   "description": "Your perfect home away from home! This cozy, fully furnished room offers a comfy bed, a dedicated workspace with heating and utilities included. Ideal for students and professionals near Old Street Station.",
+   "room_features": [
+    "Fully furnished",
+    "Comfy bed",
+    "Dedicated workspace",
+    "Heating included",
+    "Utilities included"
+   ],
+   "building_amenities": [],
+   "transit": "Near Old Street Station with access to Northern Line and major bus routes. Convenient to City, University of London and Tech City (Silicon Roundabout).",
+   "target_audience": "Students and professionals",
+   "bathroom_type": "Shared",
+   "kitchen_type": "Shared",
+   "nearby": "Indie cafes, Angel's boutiques, Shoreditch Park; proximity to Shoreditch, the City, and Canary Wharf",
+   "images": [],
+   "disclaimer": "All pictures shown are for illustration purposes only. The actual room may slightly vary due to the layout."
+  },
+  {
+   "id": 6,
+   "url": "https://fllat.com/london-uk/room/flex-basic-canary-wharf-or-south-quay",
+   "slug": "flex-basic-canary-wharf-or-south-quay",
+   "room_name": "Flex Basic",
+   "room_type": "Flex Basic",
+   "category": "Budget-friendly coliving option",
+   "location_label": "Canary Wharf | South Quay",
+   "address": "South Quay Residence, London, UK",
+   "building_name": "South Quay Residence",
+   "neighborhood": "Canary Wharf / South Quay",
+   "price": {
+    "amount": 275,
+    "currency": "GBP",
+    "period": "week",
+    "display": "£275/week",
+    "source": "scraped from fllat.com detail page (headless render), 2026-07-08"
+   },
+   "description": "Budget-friendly option featuring a single-size bed, smart TV, separated from the rest of the suite with a smart bookcase system. Offers privacy with quality furnishings at reasonable rates. The bookcase divider does not provide complete sound isolation.",
+   "room_features": [
+    "Single-size bed",
+    "Smart TV",
+    "Smart bookcase system partition (not fully soundproof)",
+    "Quality furnishings"
+   ],
+   "building_amenities": [
+    "Luxury highrise building amenities"
+   ],
+   "transit": "Less than 2 minute walk to Canary Wharf Jubilee line station and South Quay DLR station",
+   "target_audience": "Budget-conscious residents seeking luxury location",
+   "bathroom_type": "Shared",
+   "kitchen_type": "Shared",
+   "nearby": "One Canada Square, Canary Wharf Shopping complex, shops, bars and restaurants in abundance; water views",
+   "images": [],
+   "disclaimer": "All pictures shown are for illustration purposes only. The actual room may slightly vary due to the layout. An in-person or virtual visit is recommended before booking."
+  },
+  {
+   "id": 7,
+   "url": "https://fllat.com/london-uk/room/flex-basic-central-london",
+   "slug": "flex-basic-central-london",
+   "room_name": "Flex Basic",
+   "room_type": "Flex Basic",
+   "category": "Budget-friendly coliving option",
+   "location_label": "Central London",
+   "address": "Old Street Residence, London, UK",
+   "building_name": "Old Street Residence",
+   "neighborhood": "Old Street / Central London",
+   "price": {
+    "amount": 275,
+    "currency": "GBP",
+    "period": "week",
+    "display": "£275/week",
+    "source": "scraped from fllat.com detail page (headless render), 2026-07-08"
+   },
+   "description": "Budget-friendly option featuring a single-size bed, smart TV, separated from the suite by a smart bookcase system. Offers the best price/performance ratio for luxury high rise living in the city center. The bookcase system does not fully insulate the area.",
+   "room_features": [
+    "Single-size bed",
+    "Smart TV",
+    "Smart bookcase system partition (not fully soundproof)"
+   ],
+   "building_amenities": [],
+   "transit": "Centrally situated in Old Street area",
+   "target_audience": "Budget-conscious residents seeking central location",
+   "bathroom_type": "Shared",
+   "kitchen_type": "Shared",
+   "nearby": "Trendy eateries, eclectic boutiques, emerging art galleries, green spaces, funky coffee houses",
+   "pricing_note": "Prices shown are for immediate move-in. Contact for September pricing.",
+   "images": [],
+   "disclaimer": "All pictures shown are for illustration purposes only. The actual room may slightly vary due to the layout. An in-person or virtual visit is recommended before booking."
+  },
+  {
+   "id": 8,
+   "url": "https://fllat.com/london-uk/room/flex-basic-central-london-or-dingley-road",
+   "slug": "flex-basic-central-london-or-dingley-road",
+   "room_name": "Flex Basic",
+   "room_type": "Flex Basic",
+   "category": "Budget-friendly coliving option",
+   "location_label": "Central London | Dingley Road",
+   "address": "Dingley Road, Central London, UK",
+   "building_name": "Dingley Road Residence",
+   "neighborhood": "Central London / Dingley Road",
+   "price": {
+    "amount": 295,
+    "currency": "GBP",
+    "period": "week",
+    "display": "£295/week",
+    "source": "scraped from fllat.com detail page (headless render), 2026-07-08"
+   },
+   "description": "Budget-friendly option featuring a single-size bed, smart TV, separated from the rest of the suite with a smart bookcase system. The bookcase provides privacy but does not fully insulate the area. Best price/performance ratio for luxury high rise city living.",
+   "room_features": [
+    "Single-size bed",
+    "Smart TV",
+    "Smart bookcase system partition (not fully soundproof)",
+    "Private room setup within suite"
+   ],
+   "building_amenities": [],
+   "transit": "Centrally situated location",
+   "target_audience": "Budget-conscious residents",
+   "bathroom_type": "Shared",
+   "kitchen_type": "Shared",
+   "nearby": "Green spaces, funky coffee houses, eclectic eating places, trendy eateries, boutiques, art galleries",
+   "pricing_note": "Prices shown are for immediate move-in. Contact for September pricing.",
+   "images": [],
+   "disclaimer": "All pictures shown are for illustration purposes only. The actual room may slightly vary due to the layout. An in-person or virtual visit is recommended before booking."
+  },
+  {
+   "id": 9,
+   "url": "https://fllat.com/london-uk/room/flex-plus-canary-wharf",
+   "slug": "flex-plus-canary-wharf",
+   "room_name": "Flex Plus",
+   "room_type": "Flex Plus",
+   "category": "Budget-friendly coliving option with upgrades",
+   "location_label": "Canary Wharf",
+   "address": "Canary Wharf Residence, London, UK",
+   "building_name": "Canary Wharf Residence",
+   "neighborhood": "Canary Wharf",
+   "price": {
+    "amount": 295,
+    "currency": "GBP",
+    "period": "week",
+    "display": "£295/week",
+    "source": "scraped from fllat.com detail page (headless render), 2026-07-08"
+   },
+   "description": "Budget-friendly option with excellent price/performance ratio. Features a single-size bed, smart TV, and smart bookcase system for privacy (does not fully insulate the area). Located in a luxury high-rise with premium views right above the water.",
+   "room_features": [
+    "Single-size bed",
+    "Smart TV",
+    "Smart bookcase system partition (not fully soundproof)"
+   ],
+   "building_amenities": [
+    "Swimming pool",
+    "Gym",
+    "Concierge service"
+   ],
+   "transit": "Across from Canary Wharf Underground station; 5 stops to Central London (under 10 minutes)",
+   "target_audience": "Budget-conscious residents seeking luxury location",
+   "bathroom_type": "Shared",
+   "kitchen_type": "Shared",
+   "nearby": "One of London's highest-end neighbourhoods with water views",
+   "images": [],
+   "disclaimer": "All pictures shown are for illustration purposes only. The actual room may slightly vary due to the layout. An in-person or virtual visit is recommended before booking."
+  },
+  {
+   "id": 10,
+   "url": "https://fllat.com/london-uk/room/flex-plus-with-balcony-canary-wharf-or-south-quay",
+   "slug": "flex-plus-with-balcony-canary-wharf-or-south-quay",
+   "room_name": "Flex Plus with Balcony",
+   "room_type": "Flex Plus with Balcony",
+   "category": "Budget-friendly coliving option with balcony",
+   "location_label": "Canary Wharf | South Quay",
+   "address": "South Quay Residence, London, UK",
+   "building_name": "South Quay Residence",
+   "neighborhood": "Canary Wharf / South Quay",
+   "price": {
+    "amount": 315,
+    "currency": "GBP",
+    "period": "week",
+    "display": "£315/week",
+    "source": "scraped from fllat.com detail page (headless render), 2026-07-08"
+   },
+   "description": "Budget-friendly option with balcony access. Features a single bed, smart TV, partitioned using a smart bookcase system for privacy (does not offer full soundproofing). Excellent value for luxury high rise living in the heart of the city.",
+   "room_features": [
+    "Single-size bed",
+    "Smart TV",
+    "Smart bookcase system partition (not fully soundproof)",
+    "Balcony access",
+    "Quality furniture included"
+   ],
+   "building_amenities": [
+    "Luxury highrise building amenities"
+   ],
+   "transit": "Less than 2 minutes walk to Canary Wharf Jubilee line and South Quay DLR stations",
+   "target_audience": "Budget-conscious residents seeking luxury location with outdoor space",
+   "bathroom_type": "Shared",
+   "kitchen_type": "Shared",
+   "nearby": "One Canada Square, Canary Wharf Shopping complex, water-view location",
+   "images": [],
+   "disclaimer": "All pictures shown are for illustration purposes only. The actual room may slightly vary due to the layout. An in-person or virtual visit is recommended before booking."
+  },
+  {
+   "id": 11,
+   "url": "https://fllat.com/london-uk/room/flex-premium-central-london",
+   "slug": "flex-premium-central-london",
+   "room_name": "Flex Premium",
+   "room_type": "Flex Premium",
+   "category": "Premium coliving option with private balcony",
+   "location_label": "Central London",
+   "address": "Old Street Residence, London, UK",
+   "building_name": "Old Street Residence",
+   "neighborhood": "Old Street / Central London",
+   "price": {
+    "amount": 285,
+    "currency": "GBP",
+    "period": "week",
+    "display": "£285/week",
+    "source": "scraped from fllat.com detail page (headless render), 2026-07-08"
+   },
+   "description": "Bright room with private balcony and spacious area. Features a study desk, nightstand, 50\" Smart TV with streaming device. Uses a modular smart block system with abundant natural light from large windows.",
+   "room_features": [
+    "Private balcony",
+    "Study desk",
+    "Nightstand",
+    "50\" Smart TV with streaming device",
+    "Modular smart block system",
+    "Large windows for natural light",
+    "Spacious area"
+   ],
+   "building_amenities": [],
+   "transit": "Centrally situated in Old Street area with excellent transport links",
+   "target_audience": "Professionals and students seeking premium space with outdoor access",
+   "bathroom_type": "Shared",
+   "kitchen_type": "Shared",
+   "nearby": "Trendy eateries, eclectic boutiques, emerging art galleries, green spaces, funky coffee houses",
+   "pricing_note": "Prices shown are for immediate move-in. Contact for September pricing.",
+   "images": [],
+   "disclaimer": "All pictures shown are for illustration purposes only. The actual room may slightly vary due to the layout. An in-person or virtual visit is recommended before booking."
+  },
+  {
+   "id": 12,
+   "url": "https://fllat.com/london-uk/room/master-room-and-ensuite-bath-canary-wharf-or-south-quay",
+   "slug": "master-room-and-ensuite-bath-canary-wharf-or-south-quay",
+   "room_name": "Master Room & Ensuite Bath",
+   "room_type": "Master Room with Ensuite Bathroom",
+   "category": "Most spacious and luxury bedroom type",
+   "location_label": "Canary Wharf | South Quay",
+   "address": "South Quay Residence, London, UK",
+   "building_name": "South Quay Residence",
+   "neighborhood": "Canary Wharf / South Quay",
+   "price": {
+    "amount": 395,
+    "currency": "GBP",
+    "period": "week",
+    "display": "£395/week",
+    "source": "scraped from fllat.com detail page (headless render), 2026-07-08"
+   },
+   "description": "The most spacious and luxury bedroom type featuring a full-size bed, study desk, nightstand, 60\" Smart TV, and streaming device. Private ensuite bathroom provides the feeling of living in a studio. Large windows allow natural light.",
+   "room_features": [
+    "Full-size bed",
+    "Study desk",
+    "Nightstand",
+    "60\" Smart TV with streaming device",
+    "Private ensuite bathroom (exclusive use)",
+    "Large windows with natural light",
+    "Studio-like living experience"
+   ],
+   "building_amenities": [
+    "Luxury highrise building amenities"
+   ],
+   "transit": "Less than 2 minutes walk to Canary Wharf Jubilee line and South Quay DLR stations; water views",
+   "target_audience": "Students seeking ultimate privacy and comfort",
+   "bathroom_type": "Private ensuite",
+   "kitchen_type": "Shared",
+   "nearby": "One Canada Square, Canary Wharf Shopping complex, water-view location",
+   "images": [],
+   "disclaimer": "All pictures shown are for illustration purposes only. The actual room may slightly vary due to the layout. An in-person or virtual visit is recommended before booking."
+  },
+  {
+   "id": 13,
+   "url": "https://fllat.com/london-uk/room/master-room-and-ensuite-bath-canary-wharf",
+   "slug": "master-room-and-ensuite-bath-canary-wharf",
+   "room_name": "Master Room & Ensuite Bath",
+   "room_type": "Master Room with Ensuite Bathroom",
+   "category": "Most spacious and luxury bedroom type",
+   "location_label": "Canary Wharf",
+   "address": "Canary Wharf Residence, London, UK",
+   "building_name": "Canary Wharf Residence",
+   "neighborhood": "Canary Wharf",
+   "price": {
+    "amount": 395,
+    "currency": "GBP",
+    "period": "week",
+    "display": "£395/week",
+    "source": "scraped from fllat.com detail page (headless render), 2026-07-08"
+   },
+   "description": "The most spacious and luxury bedroom type with a private ensuite bathroom for exclusive occupant use. Features a full-size bed, study desk, nightstand, 60\" Smart TV with streaming device. Creates a studio-like living experience. Located in a super luxurious highrise building with amazing water views.",
+   "room_features": [
+    "Full-size bed",
+    "Study desk",
+    "Nightstand",
+    "60\" Smart TV with streaming device",
+    "Private ensuite bathroom (exclusive use)",
+    "Large windows with natural light",
+    "Studio-like living experience"
+   ],
+   "building_amenities": [
+    "Swimming pool",
+    "Gym",
+    "Concierge service"
+   ],
+   "transit": "Across from Canary Wharf underground station; 5 stops to Central London (under 10 minutes); amazing water views",
+   "target_audience": "Students seeking ultimate privacy and comfort",
+   "bathroom_type": "Private ensuite",
+   "kitchen_type": "Shared",
+   "images": [],
+   "disclaimer": "All pictures shown are for illustration purposes only. The actual room may slightly vary due to the layout. An in-person or virtual visit is recommended before booking."
+  },
+  {
+   "id": 14,
+   "url": "https://fllat.com/london-uk/room/master-room-and-ensuite-bath-central-london",
+   "slug": "master-room-and-ensuite-bath-central-london",
+   "room_name": "Master Room & Ensuite Bath",
+   "room_type": "Master Room with Ensuite Bathroom",
+   "category": "Most spacious and luxury bedroom type",
+   "location_label": "Central London",
+   "address": "Old Street Residence, London, UK",
+   "building_name": "Old Street Residence",
+   "neighborhood": "Old Street / Central London",
+   "price": {
+    "amount": 345,
+    "currency": "GBP",
+    "period": "week",
+    "display": "£345/week",
+    "source": "scraped from fllat.com detail page (headless render), 2026-07-08"
+   },
+   "description": "The most spacious and luxury bedroom type equipped with a full-size bed, private/ensuite bathroom for exclusive occupant use, study desk, nightstand, 60\" Smart TV with streaming device. Large windows provide abundant natural light. Positioned as ideal for students seeking privacy and comfort.",
+   "room_features": [
+    "Full-size bed",
+    "Study desk",
+    "Nightstand",
+    "60\" Smart TV with streaming device",
+    "Private ensuite bathroom (exclusive use)",
+    "Large windows with natural light",
+    "Studio-like living experience"
+   ],
+   "building_amenities": [],
+   "transit": "Old Street area, centrally situated",
+   "target_audience": "Students seeking ultimate privacy and comfort",
+   "bathroom_type": "Private ensuite",
+   "kitchen_type": "Shared",
+   "nearby": "Trendy eateries, eclectic boutiques, emerging art galleries, green spaces, funky coffee houses",
+   "images": [],
+   "disclaimer": "All pictures shown are for illustration purposes only. The actual room may slightly vary due to the layout."
+  },
+  {
+   "id": 15,
+   "url": "https://fllat.com/london-uk/room/master-room-and-ensuite-bath-central-london-or-dingley-road",
+   "slug": "master-room-and-ensuite-bath-central-london-or-dingley-road",
+   "room_name": "Master Room & Ensuite Bath",
+   "room_type": "Master Room with Ensuite Bathroom",
+   "category": "Most spacious and luxury bedroom type",
+   "location_label": "Central London | Dingley Road",
+   "address": "Dingley Road, Central London, UK",
+   "building_name": "Dingley Road Residence",
+   "neighborhood": "Central London / Dingley Road",
+   "price": {
+    "amount": 395,
+    "currency": "GBP",
+    "period": "week",
+    "display": "£395/week",
+    "source": "scraped from fllat.com detail page (headless render), 2026-07-08"
+   },
+   "description": "The most spacious and luxury bedroom type featuring a private ensuite bathroom for exclusive occupant use. Full-size bed, study desk, nightstand, 60\" Smart TV with streaming device. Large windows provide natural light. Creates a studio-like living experience.",
+   "room_features": [
+    "Full-size bed",
+    "Study desk",
+    "Nightstand",
+    "60\" Smart TV with streaming device",
+    "Private ensuite bathroom (exclusive use)",
+    "Large windows with natural light",
+    "Studio-like living experience"
+   ],
+   "building_amenities": [],
+   "transit": "Central London location near Dingley Road",
+   "target_audience": "Students seeking ultimate privacy and comfort",
+   "bathroom_type": "Private ensuite",
+   "kitchen_type": "Shared",
+   "nearby": "Green spaces, funky coffee houses, eclectic eating places, trendy eateries, boutiques, art galleries",
+   "images": [],
+   "disclaimer": "All pictures shown are for illustration purposes only. The actual room may slightly vary due to the layout. An in-person or virtual visit is recommended before booking."
+  },
+  {
+   "id": 16,
+   "url": "https://fllat.com/london-uk/room/master-room-and-ensuite-bath-islington-or-whitechapel",
+   "slug": "master-room-and-ensuite-bath-islington-or-whitechapel",
+   "room_name": "Master Room & Ensuite Bath",
+   "room_type": "Master Room with Ensuite Bathroom",
+   "category": "Most spacious and luxury bedroom type",
+   "location_label": "Islington | Whitechapel",
+   "address": "Islington/Whitechapel area, London, UK",
+   "building_name": "Islington/Whitechapel Residence",
+   "neighborhood": "Islington / Whitechapel",
+   "price": {
+    "amount": null,
+    "currency": "GBP",
+    "period": "week",
+    "display": "Not available - requires JavaScript rendering",
+    "source": "not extracted"
+   },
+   "description": "The most spacious and luxury bedroom type with private ensuite bathroom. This listing's detail page returned minimal data due to Next.js client-side rendering limitations.",
+   "room_features": [
+    "Full-size bed (inferred from room type)",
+    "Study desk (inferred from room type)",
+    "Nightstand (inferred from room type)",
+    "60\" Smart TV with streaming device (inferred from room type)",
+    "Private ensuite bathroom (exclusive use)",
+    "Large windows with natural light (inferred from room type)"
+   ],
+   "building_amenities": [],
+   "transit": "London location",
+   "target_audience": "Students seeking ultimate privacy and comfort",
+   "bathroom_type": "Private ensuite",
+   "kitchen_type": "Shared",
+   "images": [],
+   "disclaimer": "All pictures shown are for illustration purposes only. The actual room may slightly vary due to the layout.",
+   "delisted_on_source": "fllat.com page returns empty generic shell as of 2026-07-08; listing appears removed"
+  }
+ ],
+ "room_type_summary": {
+  "Deluxe Room": {
+   "count": 5,
+   "description": "Signature luxury product with full-size bed, study desk, nightstand, 60\" Smart TV with streaming device, large windows",
+   "bathroom": "Shared",
+   "listings": [
+    1,
+    2,
+    3,
+    4,
+    5
+   ]
+  },
+  "Flex Basic": {
+   "count": 3,
+   "description": "Budget-friendly option with single-size bed, smart TV, separated by smart bookcase system (not fully soundproof)",
+   "bathroom": "Shared",
+   "listings": [
+    6,
+    7,
+    8
+   ]
+  },
+  "Flex Plus": {
+   "count": 2,
+   "description": "Budget-friendly option similar to Flex Basic with upgrades. Single bed, smart TV, bookcase partition",
+   "bathroom": "Shared",
+   "listings": [
+    9,
+    10
+   ]
+  },
+  "Flex Premium": {
+   "count": 1,
+   "description": "Premium option with private balcony, spacious area, study desk, nightstand, 50\" Smart TV, modular smart block system",
+   "bathroom": "Shared",
+   "listings": [
+    11
+   ]
+  },
+  "Master Room & Ensuite Bath": {
+   "count": 5,
+   "description": "Most spacious and luxury type with private ensuite bathroom, full-size bed, study desk, nightstand, 60\" Smart TV. Studio-like experience.",
+   "bathroom": "Private ensuite",
+   "listings": [
+    12,
+    13,
+    14,
+    15,
+    16
+   ]
+  }
+ },
+ "building_summary": {
+  "Canary Wharf Residence": {
+   "address": "7 Baltimore Wharf, London, UK",
+   "area": "Canary Wharf",
+   "amenities": [
+    "Swimming pool",
+    "Gym",
+    "Concierge service"
+   ],
+   "description": "Super luxurious highrise building with water views, across from Canary Wharf underground station",
+   "transit": "5 stops to Central London (under 10 minutes)",
+   "listings": [
+    1,
+    9,
+    13
+   ]
+  },
+  "South Quay Residence": {
+   "address": "Discovery Dock Apartments East, London, UK",
+   "area": "Canary Wharf / South Quay",
+   "amenities": [
+    "Luxury highrise building amenities"
+   ],
+   "description": "One of the most luxurious highrise buildings in a high-end London neighborhood with water views",
+   "transit": "Less than 2 mins walk to Canary Wharf Jubilee line and South Quay DLR",
+   "nearby": "One Canada Square, Canary Wharf Shopping complex",
+   "listings": [
+    2,
+    6,
+    10,
+    12
+   ]
+  },
+  "Old Street Residence": {
+   "address": "238 City Rd, London, UK",
+   "area": "Old Street / Central London",
+   "amenities": [],
+   "description": "Ideally and centrally situated with trendy eateries, boutiques, and art galleries nearby",
+   "transit": "Central London location",
+   "nearby": "Trendy eateries, eclectic boutiques, emerging art galleries, green spaces",
+   "listings": [
+    3,
+    7,
+    11,
+    14
+   ]
+  },
+  "Dingley Road Residence": {
+   "address": "22 Dingley Rd, London, UK",
+   "area": "Central London / Dingley Road",
+   "amenities": [],
+   "description": "Central London location near Dingley Road with green spaces and eclectic dining",
+   "transit": "Central London location",
+   "nearby": "Green spaces, funky coffee houses, eclectic eating places, boutiques, art galleries",
+   "listings": [
+    4,
+    8,
+    15
+   ]
+  },
+  "Provost Street Residence": {
+   "address": "Provost Street, London, UK",
+   "area": "Islington / Whitechapel",
+   "amenities": [],
+   "description": "Convenient location near Old Street Station for students and professionals",
+   "transit": "Near Old Street Station (Northern Line), major bus routes",
+   "nearby": "Indie cafes, Angel's boutiques, Shoreditch Park, Silicon Roundabout",
+   "listings": [
+    5
+   ]
+  },
+  "Islington/Whitechapel Residence": {
+   "address": "Islington/Whitechapel area, London, UK",
+   "area": "Islington / Whitechapel",
+   "amenities": [],
+   "description": "London coliving location in Islington/Whitechapel area",
+   "listings": [
+    16
+   ]
+  }
+ }
 }
