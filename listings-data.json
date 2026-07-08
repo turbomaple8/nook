@@ -4,7 +4,7 @@
   "region": "London, UK",
   "listing_page_url": "https://fllat.com/london-uk/furnished-shared-rooms-on-rent",
   "scraped_at": "2026-02-15",
-  "total_listings": 16,
+  "total_listings": 17,
   "notes": {
    "data_completeness": "Partial - fllat.com is a Next.js app using React Server Components with client-side hydration. Prices, image URLs, and some amenities are loaded dynamically via JavaScript and are not available in the static HTML/RSC stream. Prices for listings 1-4 were provided by the user from the listing page. Descriptions and features were extracted from detail pages.",
    "api_investigation": {
@@ -642,6 +642,28 @@
    "images": [],
    "disclaimer": "All pictures shown are for illustration purposes only. The actual room may slightly vary due to the layout.",
    "delisted_on_source": "fllat.com page returns empty generic shell as of 2026-07-08; listing appears removed"
+  },
+  {
+   "id": 17,
+   "url": "https://fllat.com/london-uk/room/master-room-and-ensuite-bath-with-private-balcony-canary-wharf-or-south-quay",
+   "slug": "master-room-and-ensuite-bath-with-private-balcony-canary-wharf-or-south-quay",
+   "room_name": "Master Room & Ensuite Bath with Private Balcony",
+   "room_type": "Master Room",
+   "category": "Top-tier luxury product",
+   "location_label": "Canary Wharf | South Quay",
+   "address": "Discovery Dock Apartments East, London, UK",
+   "building_name": "South Quay Residence",
+   "neighborhood": "Canary Wharf / South Quay",
+   "price": {
+    "amount": 375,
+    "currency": "GBP",
+    "period": "week",
+    "display": "£375/week",
+    "source": "scraped from fllat.com detail page (headless render), 2026-07-08; shown with 5% off applied"
+   },
+   "description": "Master room with private/ensuite bathroom and a balcony for the exclusive use of the occupant. Full size bed, study desk, nightstand, 60\" Smart TV and streaming device. The private bathroom gives the feeling of living in a studio; big windows allow abundant natural light.",
+   "nook_page": "room-master-balcony.html",
+   "added_to_nook": "2026-07-08"
   }
  ],
  "room_type_summary": {

@@ -1,4 +1,16 @@
 {
   "cleanUrls": true,
-  "trailingSlash": false
+  "trailingSlash": false,
+  "redirects": [
+    {
+      "source": "/room-master-islington",
+      "destination": "/rooms",
+      "permanent": true
+    },
+    {
+      "source": "/room-master-islington.html",
+      "destination": "/rooms",
+      "permanent": true
+    }
+  ]
 }
