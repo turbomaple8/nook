@@ -3,6 +3,17 @@
   "trailingSlash": false,
   "redirects": [
     {
+      "source": "/:path*",
+      "has": [
+        {
+          "type": "host",
+          "value": "nookrent.com"
+        }
+      ],
+      "destination": "https://www.nookrent.com/:path*",
+      "permanent": true
+    },
+    {
       "source": "/room-master-islington",
       "destination": "/rooms",
       "permanent": true
