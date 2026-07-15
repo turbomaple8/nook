@@ -22,6 +22,16 @@
       "source": "/room-master-islington.html",
       "destination": "/rooms",
       "permanent": true
+    },
+    {
+      "source": "/cookies",
+      "destination": "/cookie-policy",
+      "permanent": true
+    },
+    {
+      "source": "/cookies.html",
+      "destination": "/cookie-policy",
+      "permanent": true
     }
   ]
 }
