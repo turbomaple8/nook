@@ -3,6 +3,11 @@
   "trailingSlash": false,
   "redirects": [
     {
+      "source": "/blog-:slug",
+      "destination": "/blog/:slug",
+      "permanent": true
+    },
+    {
       "source": "/:path*",
       "has": [
         {
