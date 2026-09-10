@@ -142,3 +142,7 @@ All styles in `styles.css`. Use existing CSS custom properties from `:root`. Fol
 
 ### Common Gotcha
 Nav and footer are duplicated in every HTML file. Changes to shared elements must be applied to ALL files.
+
+## Content Facts (do not contradict)
+- **Minimum stay is 12 months.** Every page states contracts run for a minimum of 12 months. Never describe Nook as short-term, flexible-term, "from 3 months", month-to-month or rolling. Staff make occasional exceptions privately; the website must not advertise them.
+- **Deposit is four weeks' rent** (one full rent period).
